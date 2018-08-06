@@ -1,0 +1,62 @@
+body{
+  max-width: 1240px;
+  margin: 0 auto;
+}
+a{display: block;}
+h1 {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  background: dimgray;
+  color: #fff;
+  height: 2rem;
+  font-weight: bold;
+}
+
+.main ul {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  align-content: center;
+}
+.left ul{
+  flex: 80%;
+}
+
+.right ul{
+  flex: 20%;
+}
+.main li{
+  padding: 0 1rem;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrap nav {
+  color: #fff;
+  flex: 0 0 12rem;
+}
+.wrap  li {
+  padding: 1rem;
+  background: darkgray;
+}
+.content{
+  padding: 0 1rem;
+}
+
+content {
+  padding: 1rem;
+}
+
+footer{
+  text-align: center;
+}

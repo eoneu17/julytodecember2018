@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+    }
+
+    #main {
+      position: relative;
+      height: 45px;
+      background: url(img/header_background.png);
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    #main a,
+    #main label {
+      display: block;
+      position: absolute;
+      top: 7px;
+      height: 32px;
+      background: url(img/sprites.png);
+      text-indent: -9999px;
+    }
+
+    #main a {
+      left: 5px;
+      width: 62px;
+      background-position: 0 0;
+    }
+
+    #main label {
+      right: 5px;
+      width: 32px;
+      background-position: -62px 0;
+      ;
+    }
+
+    #gnb_wrap {
+      background: #363636;
+      padding: 15px;
+    }
+
+    #gnb {
+      background: #fff;
+      padding: 5px;
+
+    }
+
+    #gnb ul:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    #gnb li {
+      float: left;
+      width: 80px;
+    }
+
+    #gnb a {
+      display: block;
+      text-align: center;
+      line-height: 25px;
+    }
+
+    #toggle {
+      display: none;
+    }
+
+    #toggle+#wrap>#gnb_wrap {
+      display: none;
+    }
+
+    #toggle:checked+#wrap>#gnb_wrap {
+      display: block;
+    }
+
+    #top {
+      background: #b42111;
+      border-bottom: 1px solid #000;
+    }
+
+    #top:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    #top div {
+      float: left;
+      width: 25%;
+    }
+
+    #top a {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      color: #fff;
+    }
+
+    #bottom {
+      width: 100%;
+      display: table;
+      border-bottom: 1px solid #000;
+    }
+
+    #bottom div {
+      display: table-cell;
+      position: relative;
+    }
+
+    #bottom a {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    #bottom a:before {
+      content: "|";
+      position: absolute;
+      left: -3px;
+      color: #b42111;
+    }
+
+    #main_section {
+      padding: 10px;
+    }
+
+    #section_header {
+      padding: 20px;
+    }
+
+    #section_article {
+      padding: 10px;
+    }
+
+    #main_footer {
+      padding: 10px;
+      border-top: 3px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="toggle">
+  <div id="wrap">
+    <header id="main">
+      <a href="#" class="left">main</a>
+      <h1>Mobile</h1>
+      <label for="toggle" class="right" onclick="">Toggle</label>
+    </header>
+    <div id="gnb_wrap">
+      <nav id="gnb">
+        <ul>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+          <li><a href="#">버튼</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav id="top">
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+    </nav>
+    <nav id="bottom">
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+      <div><a href="#">button</a></div>
+    </nav>
+  </div>
+  <section id="main_section">
+    <header id="section_header">
+      <h1>Lorem ipsum</h1>
+      <time>2012-12-09 - Birthday</time>
+    </header>
+    <article id="section_article">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor
+        ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus.
+        Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer
+        accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+      <br />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor
+        ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus.
+        Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer
+        accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+      <br />
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor
+        ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus.
+        Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer
+        accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+    </article>
+  </section>
+  <footer id="main_footer">
+    <h3>HTML5 + CSS3 Basic</h3>
+    <address>Website Layout Basic</address>
+  </footer>
+</body>
+
+</html>

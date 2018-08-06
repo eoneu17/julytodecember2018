@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul,
+		ol {
+			list-style: none;
+		}
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		header {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			padding: .7rem;
+		}
+
+		h1 {
+			flex-basis: 30%;
+		}
+
+		nav.main {
+			flex-basis: 70%;
+		}
+
+		nav.main>ul {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.sub {
+			display: none;
+			padding: .5rem 0;
+			position: absolute;
+		}
+
+		header li {
+			padding: .5rem 0;
+		}
+
+		.main>ul>li:hover .sub {
+			display: block;
+			color: dimgray;
+		}
+
+		.main>ul>li:hover {
+			border-bottom: 3px solid pink;
+		}
+
+		content div {
+			width: 100%;
+			height: 50vh;
+			background: lightyellow;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>LOGO</h1>
+		<nav class="main">
+			<ul>
+				<li>
+					<a href="#">Lorem.</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">Architecto.</a></li>
+						<li><a href="#">Atque!</a></li>
+						<li><a href="#">Eum.</a></li>
+						<li><a href="#">Odio!</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Explicabo.</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">Adipisci.</a></li>
+						<li><a href="#">Veniam!</a></li>
+						<li><a href="#">Quos.</a></li>
+						<li><a href="#">Provident.</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Voluptatum.</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">Perspiciatis.</a></li>
+						<li><a href="#">Tenetur.</a></li>
+						<li><a href="#">Blanditiis.</a></li>
+						<li><a href="#">Necessitatibus?</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Eius!</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">Suscipit!</a></li>
+						<li><a href="#">Inventore.</a></li>
+						<li><a href="#">Repudiandae!</a></li>
+						<li><a href="#">Iure?</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Vel.</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">At.</a></li>
+						<li><a href="#">Nam!</a></li>
+						<li><a href="#">Eum.</a></li>
+						<li><a href="#">Porro.</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Officiis!</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">Voluptatum.</a></li>
+						<li><a href="#">Optio?</a></li>
+						<li><a href="#">Possimus.</a></li>
+						<li><a href="#">Numquam.</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Sint.</a>
+					<ul class="sub">
+						<li><a href="#">Lorem.</a></li>
+						<li><a href="#">Nisi.</a></li>
+						<li><a href="#">Incidunt.</a></li>
+						<li><a href="#">Laboriosam.</a></li>
+						<li><a href="#">Numquam.</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<content>
+		<div></div>
+	</content>
+</body>
+
+</html>
