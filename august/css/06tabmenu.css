@@ -1,9 +1,10 @@
-body{
+body {
   width: 960px;
   margin: 0 auto;
 }
 
 /* header start */
+
 .main {
   height: 160px;
   background: lightyellow;
@@ -36,28 +37,61 @@ li:last-child {
   border-right: 1px solid #000;
 }
 
-.global{
+.global {
   position: absolute;
-  top: 0;right: 0;
+  top: 0;
+  right: 0;
 }
-.global li{
+
+.global li {
   padding: 0 5px;
 }
-.local{
+
+.local {
   position: absolute;
-  bottom: 0;right: 0;
+  bottom: 0;
+  right: 0;
 }
-.local li{
+
+.local li {
   padding: 10px;
 }
+
 /* header end */
 
 /* section start */
-section{
+
+.wrap {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+section {
   width: 760px;
   border: 1px solid #000;
   margin: 5px 5px 0 0;
 }
-article{
+
+article {
   padding: 5px;
+}
+
+/* section end */
+
+/* aside start */
+
+aside {
+  width: 200px;
+  height: 300px;
+  right: 0;
+  margin-top: 5px;
+  background: lightblue;
+}
+
+/* aside end */
+
+footer{
+  text-align: center;
+  padding: 10px;
 }
