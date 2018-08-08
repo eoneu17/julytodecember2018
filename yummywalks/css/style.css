@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* toggle */
+
+.toggleContainer {
+  display: inline-block;
+  cursor: pointer;
+}
+
+[class*=bar] {
+  width: 35px;
+  height: 5px;
+  background: #333;
+  margin: 6px 0;
+  transition: .4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  -ms-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  -ms-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#toggle, #toggle+header>.toggleWrap{
+  display: none;
+}
+
+#toggle:checked+header>.toggleWrap {
+display: block;
+position: absolute;
+top: 3rem;
+right: 0;
+background: #ccc;
+text-align: center;
+transition: .4s;
+}
+header{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  background: #ccc;
+  height: 3rem;
+  align-content: center;
+  flex-flow: row wrap;
+}
