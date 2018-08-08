@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    h1:hover {
+      background-color: lightyellow;
+      color: plum;
+    }
+
+    h1:active {
+      color: orange;
+    }
+
+    input {
+      background-color: lightyellow;
+      border: 1px solid #999999
+    }
+
+    input:disabled {
+      background-color: lightblue;
+    }
+
+    input:focus {
+      background-color: plum;
+      color: white;
+    }
+
+    li {
+      color: white;
+    }
+
+    ul>li:nth-child(2n) {
+      background-color: aqua;
+    }
+
+    ul>li:nth-child(2n+1) {
+      background-color: lightblue;
+    }
+
+    ul>li:first-child {
+      background-color: lightpink;
+    }
+
+    ul>li:last-child {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Lorem ipsum dolor sit amet.</h1>
+  <h1>Quod, vitae a minus voluptas?</h1>
+  <h1>Saepe tempore, magnam praesentium sed!</h1>
+  <hr>
+  <form action="#">
+    <input type="text"><br>
+    <input type="text" disabled><br>
+    <input type="text"><br>
+    <input type="text"><br>
+  </form>
+  <hr>
+  <ul>
+    <li>menu01</li>
+    <li>menu02</li>
+    <li>menu03</li>
+    <li>menu04</li>
+    <li>menu05</li>
+    <li>menu06</li>
+    <li>menu07</li>
+    <li>menu08</li>
+    <li>menu09</li>
+    <li>menu10</li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS selector[attribute]</title>
+  <style>
+    img {
+      width: 30%;
+      border: 1px solid#b6f4ff;
+    }
+
+    img[src$=png] {
+      border: 2px solid#beffbd;
+    }
+
+    img[src$=jpg] {
+      border: 2px solid#ffcdd9;
+    }
+
+    img[src$=gif] {
+      border: 2px solid#ffcfba;
+    }
+
+    div li {
+      background-color: rgb(255, 253, 217);
+    }
+
+    nav li {
+      background-color: rgb(198, 255, 209);
+    }
+
+    nav>ul>li {
+      background-color: rgb(204, 253, 255);
+    }
+
+    ul>li.first {
+      background-color: #ffffff;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: 30px;
+      color: black;
+    }
+
+    h3+h4 {
+      color: #00c2ff;
+    }
+
+    h3~h4 {
+      color: #ee3165;
+    }
+
+    h4+h5 {
+      color: #eeb931;
+    }
+
+    div+p {
+      background-color: lightyellow;
+    }
+
+    div.test~p {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+
+<body>
+  <fieldset>
+    <h1>참고사이트</h1>
+    <ul class="menu">
+      <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">w3schools CSS selector reference</a><br></li>
+      <li><a href="https://www.w3schools.com/cssref/css_colors.asp">w3schools CSS colors</a></li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <figuer><img src="./images/1.jpg" alt="팬케이크">
+      <img src="./images/2.jpg" alt="꽃">
+      <img src="./images/3.jpg" alt="자전거"></figuer>
+
+    <figuer><img src="./images/1.jpg" alt="팬케이크">
+      <img src="./images/2.png" alt="꽃">
+      <img src="./images/3.gif" alt="자전거"></figuer>
+  </fieldset>
+  <fieldset>
+    <div>
+      <h1>CSS3 selector</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <ul>
+        <li class="first">Lorem ipsum.</li>
+        <li>Consequuntur, aperiam.</li>
+        <li>Rem, omnis.</li>
+      </ul>
+    </div>
+    <nav>
+      <ul>
+        <li class="first">Lorem ipsum.</li>
+        <li>Consequuntur, aperiam.</li>
+        <li>Rem, omnis.</li>
+      </ul>
+    </nav>
+  </fieldset>
+  <fieldset>
+    <h3>Lorem ipsum dolor.</h3>
+    <h4>Lorem ipsum dolor.</h4>
+    <h4>Lorem ipsum dolor.</h4>
+    <h4>Lorem ipsum dolor.</h4>
+    <h4>Lorem ipsum dolor.</h4>
+    <h5>Lorem ipsum dolor.</h5>
+    <h5>Lorem ipsum dolor.</h5>
+    <h5>Lorem ipsum dolor.</h5>
+    <h5>Lorem ipsum dolor.</h5>
+    <h6>Lorem ipsum dolor.</h6>
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Voluptatibus quae, magni praesentium aperiam?</p>
+      <p>Qui quaerat accusamus obcaecati? Fuga!</p>
+      <p>Hic vitae, quae culpa temporibus!</p>
+      <p>Natus beatae impedit earum voluptatum.</p>
+      <p>Aperiam animi necessitatibus, ad optio.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Iure doloribus, ex odio in.</p>
+    <p>Ducimus qui at, optio. Mollitia.</p>
+    <p>Quaerat, distinctio placeat aspernatur doloribus.</p>
+    <p>Similique dolor vel placeat necessitatibus.</p>
+    <hr>
+    <div class=test>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Voluptatibus quae, magni praesentium aperiam?</p>
+      <p>Qui quaerat accusamus obcaecati? Fuga!</p>
+      <p>Hic vitae, quae culpa temporibus!</p>
+      <p>Natus beatae impedit earum voluptatum.</p>
+      <p>Aperiam animi necessitatibus, ad optio.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Iure doloribus, ex odio in.</p>
+    <p>Ducimus qui at, optio. Mollitia.</p>
+    <p>Quaerat, distinctio placeat aspernatur doloribus.</p>
+    <p>Similique dolor vel placeat necessitatibus.</p>
+  </fieldset>
+
+</body>
+
+</html>

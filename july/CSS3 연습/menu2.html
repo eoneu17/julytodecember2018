@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link,
+    a:visited {
+      color: inherit;
+    }
+
+    body {
+      font: 1rem/1.5 "고딕", "SanSerif";
+      margin: 10px;
+    }
+    section{width: 530px; background: azure;}
+    section:after{content:""; display: block; clear:both;}
+    nav {
+      width: 130px;
+      padding: 12px;
+      float: left;
+    }
+
+    article {
+      width: 350px;
+      padding: 10px;
+      border-left: 1px solid #ccc;
+      float: right;
+    }
+    .active{font-size: 20px; font-weight: bold;}
+  </style>
+</head>
+
+<body>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="menu1.html">menu1</a></li>
+        <li><a href="menu2.html" class="active">menu2</a></li>
+        <li><a href="menu3.html">menu3</a></li>
+      </ul>
+    </nav>
+    <article>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis possimus porro aliquam commodi nostrum praesentium, placeat deserunt velit ipsam laborum, sit, assumenda ab. Sit eum quas eos dolorum consectetur vero!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam praesentium quod, culpa quaerat, aliquid non nulla voluptate! Consequuntur, vel accusantium nostrum neque accusamus minima corporis ipsum quaerat rerum deserunt, tenetur nulla, sequi non ipsam vitae adipisci, quam omnis officia sapiente ut aut modi. Ea nulla necessitatibus explicabo, quidem, itaque libero.</p>
+    </article>
+  </section>
+  <footer>
+    <deress>&copy;2018 copyright. All right reserved</deress>
+  </footer>
+</body>
+
+</html>

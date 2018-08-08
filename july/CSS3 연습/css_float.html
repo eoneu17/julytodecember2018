@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- *메뉴 만들기*
+1. html 작성
+2. list-style: none, padding: 10px
+3. float: left
+4. float 해제 parent overflow: hidden
+5. first/last-child border-radius
+6. nth-child(2n) background-color -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul {
+      overflow: hidden;
+      /* float를 해제 */
+    }
+
+    li {
+      list-style: none;
+      float: left;
+      /* float 해제는 clear: both; */
+      padding: 15px;
+      /* padding: 위 오른쪽 아래 왼쪽 순으로 개별 지정 할 수 있음 */
+      border: 1px solid #ffffff
+    }
+
+    li:first-child {
+      border-radius: 30px 0 0 30px;
+      /* border 끝을 둥글게: 왼쪽-위 오른쪽-위 오른쪽-아래 왼쪽-아래 */
+    }
+
+    li:last-child {
+      border-radius: 0 30px 30px 0;
+    }
+
+    li:nth-child(2n) {
+      background-color: aquamarine;
+    }
+
+    li:nth-child(2n+1) {
+      background-color: dodgerblue;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+    <li>menu6</li>
+    <li>menu7</li>
+  </ul>
+</body>
+
+</html>

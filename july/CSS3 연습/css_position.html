@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(images/bg_grid.gif);
+
+    }
+
+    .wrap {
+      width: 500px;
+      height: 200px;
+      background-color: snow;
+      margin: 0 auto;
+      position:relative;
+    }
+
+    .box01,
+    .box02,
+    .box03 {
+      position: absolute;
+    }
+
+    .box01 {
+      background-color: plum;
+      height: 70px; width: 100px; left:25px;
+    }
+
+    .box02 {
+      background-color: pink;
+      top: 70px; height: 30px; width:100%
+    }
+
+    .box03 {
+      background-color: honeydew;
+      top: 100px; width: 450px; height:100px; left: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="box01">logo</div>
+    <div class="box02">menu</div>
+    <div class="box03">contents</div>
+  </div>
+</body>
+
+</html>

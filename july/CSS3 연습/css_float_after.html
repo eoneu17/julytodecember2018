@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box,
+      {
+      width: 200px;
+      height: 200px;
+      background: lightblue;
+    }
+
+    .box:after {
+      content: "after"
+    }
+
+    .box:before {
+      content: "before"
+    }
+
+    .float1,
+    .float2,
+    .float3 {
+      float: left;
+      width: 200px;
+      height: 300px;
+    }
+
+    .float1 {
+      background: honeydew;
+    }
+
+    .float2 {
+      background: snow;
+    }
+
+    .float3 {
+      background: azure;
+    }
+
+    .container {
+      width: 600px;
+      background: peachpuff;
+    }
+
+    .container:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Lorem ipsum.</h1>
+  </div>
+  <div class="container">
+    <div class="float1">test1</div>
+    <div class="float2">test2</div>
+    <div class="float3">test3</div>
+  </div>
+</body>
+
+</html>

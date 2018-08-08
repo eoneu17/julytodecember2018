@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>list tag</title>
+  <style>
+    /* tag>tag는 자손관계(바로 아래), tag tag는 후손관계 */
+    ul>li {
+      list-style: none;
+      /* 리스트의 디스크를 빼고(list-style)*/
+      float: left;
+      /*한 줄에 모두 몰아넣고(float)*/
+      margin-left: 10px;
+      /*간격 벌리기(margin-left) */
+    }
+    h1{color: darkblue;}
+  </style>
+</head>
+
+<body>
+  <!-- h1>{비순차적 목록}^h2>{주메뉴} -->
+  <h1>비순차적 목록</h1>
+  <h2>주메뉴</h2>
+
+  <!-- (h1>{비순차적 목록})+h2>{주메뉴} -->
+  <h1>비순차적 목록</h1>
+  <h2>주메뉴</h2>
+  <br>
+  <hr><br>
+
+  <!-- h1>{비순차적 목록}^h2{주메뉴}^ul>li*6>a[href="#"]>{menu$} -->
+  <h1>비순차적 목록</h1>
+  <h2>주메뉴</h2>
+  <ul>
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">사업영역</a></li>
+    <li><a href="#">제품소개</a></li>
+    <li><a href="#">고객센터</a></li>
+    <li><a href="#">홍보자료실</a></li>
+    <li><a href="#">인재채용</a></li>
+  </ul>
+
+  </ul>
+</body>
+
+</html>

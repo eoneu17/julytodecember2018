@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table</title>
+  <style>
+    td {
+      width: 100px;
+      height: 50px;
+      text-align: center;
+    }
+
+    th {
+      height: 30px;
+      width: 100px;
+      color: darkblue;
+      background-color: lightyellow;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- h1>{표만들기}^h2>{셀합치기}^table[border="1"]>tr*7>td*3 -->
+  <h1>표만들기</h1>
+  <h2>셀합치기</h2>
+  <table border="1">
+    <caption>공연요금</caption>
+    <tr>
+      <th>구분</th>
+      <th>S석</th>
+      <th>VIP석</th>
+    </tr>
+    <tr>
+      <th>성인</th>
+      <td>1000\</td>
+      <td>2000\</td>
+    </tr>
+    <tr>
+      <th>청소년</th>
+      <td>700\</td>
+      <td>1400\</td>
+    </tr>
+    <tr>
+      <th>소인</th>
+      <td colspan="2">500\</td>
+    </tr>
+    <tr>
+      <th rowspan="2">공연시간</th>
+      <th>1회</th>
+      <td>15:00</td>
+    </tr>
+    <tr>
+      <th>2회</th>
+      <td>17:00</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h1>표만들기</h1>
+  <h2>셀합치기: colgroup, thead, tbody, tfoot</h2>
+  <table border="1" width=100%>
+    <caption>태블릿 PC와 스마트폰 판매 현황</caption>
+    <colgroup>
+      <col width="20%">
+      <col width="40%">
+      <col width="40%">
+    </colgroup>
+    <!-- tr*4>td*3 -->
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>태블릿 PC</th>
+        <th>스마트폰</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>총판매수</th>
+        <td>40000</td>
+        <td>40000</td>
+      </tr>
+    <tfoot>
+    <tbody>
+      <tr>
+        <th>상반기판매수</th>
+        <td>20000</td>
+        <td>20000</td>
+      </tr>
+      <tr>
+        <th>하반기판매수</th>
+        <td>20000</td>
+        <td>20000</td>
+      </tr>
+    </tbody>
+
+</body>
+
+</html>

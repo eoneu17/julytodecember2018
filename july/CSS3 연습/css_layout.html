@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(images/bg_grid.gif);
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .wrap {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      background: snow;
+      overflow: hidden;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+      width: 200%;
+      height: 100px;
+      position: absolute;
+    }
+
+    .box1 {
+      background-color: plum;
+      z-index: 2;
+    }
+
+    .box2 {
+      background-color: pink;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+    }
+
+    .box3 {
+      background-color: peachpuff;
+      top: 100px;
+      left: 100px
+    }
+  </style>
+</head>
+
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias harum architecto culpa enim alias adipisci cupiditate corrupti molestiae, delectus fugiat tempora earum aspernatur rem maxime, in facilis nihil aliquid iste?</p>
+  <div class="wrap">
+    <div class="box1">01</div>
+    <div class="box2">02</div>
+    <div class="box3">03</div>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae animi illo rem eligendi, similique velit, blanditiis ab eum quas? Quidem quasi ut dolor, neque, alias vitae ipsam labore eligendi. Cupiditate!</p>
+</body>
+
+</html>

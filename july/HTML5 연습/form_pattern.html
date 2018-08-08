@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form place holder</title>
+  <style>
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p><strong>*</strong>표시는 필수 입력 항목입니다.</p>
+  <form action="#" method="#" name="get">
+    <fieldset>
+      <legend>필드 유효성 검사</legend>
+      <ul>
+        <li><label for="name"><strong>*</strong></label>
+          <input type="text" id="name" name="name" required placeholder="이름" autocomplete="on" autofocus></li>
+        <li><label for="id"><strong>*</strong></label>
+          <input type="text" id="id" name="id" required placeholder="아이디" autocomplete="off"></li>
+        <li><label for="pwd"><strong>*</strong></label>
+          <input type="password" id="pwd" name="pwd" required placeholder="비밀번호"></li>
+        <li><label for="tel"><strong>*</strong>전화번호 </label>
+          <input type="tel" id="tel" name="tel" required pattern="\d{3}-\d{3,4}-\d{4}"></li>
+        <li><label for="email"><strong>*</strong>이메일 </label>
+          <input type="email" id="email" name="email" required placeholder="abc123@abc.com"></li>
+        <li><label for="course">수강과목</label>
+          <input type="text" id="course" list="subjects">
+          <datalist id=subjects>
+            <option value="html5">HTML5</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JAVAscript</option>
+            <option value="jquery">jQuery</option>
+          </datalist>
+        </li>
+        <li>
+          <input type="button" value="이전">
+          <input type="button" value="다음" disabled>
+        </li>
+        <li><label for="book">선택한 책</label>
+          <input type="hidden" name="book" id="book" value="백의 그림자">
+          <input type="text" name="book" id="book" value="백의 그림자">
+          <input type="text" name="book" id="book" value="계속해보겠습니다" readonly>
+        </li>
+      </ul>
+      <input type="submit" value="유효성 검사">
+    </fieldset>
+  </form>
+</body>
+
+</html>

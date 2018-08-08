@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* reset start */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    a{text-decoration:none;}
+    a:link, a:visited{color: black;}
+    ul, li{list-style: none;}
+    /* reset end */
+
+    /* header start */
+    header{width:1000px; height:150px; position: relative; background: azure; margin: 0 auto;}
+    header h1{width:100px; height: 100px; position: absolute; background: snow; font-size: 16px; text-align: center; line-height: 100px; top: 10px; left: 50%; transform: translate(-50%, 0);}
+    header li{float: left}
+    header a{display: block; text-align: center;}
+    /* util menu */
+    #util-menu{position: absolute; top:10px; right: 10px;}
+    #util-menu ul{overflow: hidden;}
+    #util-menu li{border-right: 1px solid black;}
+    #util-menu li:last-child{border: none;}
+    #util-menu a{width: 100px;height: 20px; line-height: 20px;}
+    #util-menu a:hover{font-weight: bold;}
+    /* gnb menu */
+    #gnb-menu{position: absolute; bottom: 0;}
+    #gnb-menu ul{overflow: hidden;}
+    #gnb-menu li{background: mistyrose;}
+    #gnb-menu li:hover{background: pink;}
+    #gnb-menu a{width: 200px; height: 40px; line-height: 40px;}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>회사로고</h1>
+    <nav id="util-menu">
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+      </ul>
+    </nav>
+    <nav id="gnb-menu">
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    i {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: url(images/icon-sprite.png) no-repeat 0 0;
+      text-indent: -9999px;
+      /* text-indent는 들여쓰기 할 때 */
+    }
+
+    .icon-join1 {
+      background-position: -150px -80px;
+      margin-right: 5px;
+    }
+
+    .icon-join2 {
+      background-position: -90px -80px;
+      margin-right: 5px;
+    }
+
+    a:link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:visited {
+      color: inherit;
+    }
+
+    div {
+      margin: 10px auto;
+      width: 100px;
+    }
+
+    div a:hover>i {
+      background-position: -90px -80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <a href="#"><i class="icon-join1">회원가입</i>회원가입</a>
+  </div>
+  <div>
+    <i class="icon-join2">이메일</i>이메일
+  </div>
+</body>
+
+</html>

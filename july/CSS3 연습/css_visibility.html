@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: mintcream;
+    }
+
+    div#box {
+      display: inline-block;
+      /* inline은 좌우만, inline-block는 상하좌우 다 적용됨 */
+      background-color: salmon;
+      width: 300px;
+      height: 50px;
+      margin: 10px;
+      /* left-right 중간은 center, top-bottom 중간은 middle */
+    }
+
+    div#box:hover {
+      opacity: .5;
+    }
+
+    span {
+      /* display: block; */
+      background-color: lemonchiffon;
+    }
+
+    li {
+      list-style: none;
+      padding: 14px 200px 30px 100px;
+      background-color: rosybrown;
+      display: inline-block;
+      color: white;
+      border: 2px solid #000000;
+      margin: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <span>Lorem ipsum.</span>
+  <div id="box">Lorem ipsum.</div>
+  <span>Molestias, impedit.</span>
+  <span>Itaque, quas.</span><hr>
+  <ul>
+    <li>안녕하세요</li>
+    <li>안녕하세요</li>
+  </ul>
+  <a href="#">menu</a>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form</title>
+</head>
+
+<body>
+  <form action="form_go.php" method="get">
+    이름: <input type="text" name="name"><br> 이메일: <input type="text" name="email"><br>
+    <input type="submit">
+  </form>
+  <hr>
+  <form action="form_go2.php" method="post">
+    이름: <input type="text" name="name"><br> 이메일: <input type="text" name="email"><br>
+    <input type="submit">
+  </form>
+  <hr>
+  <form action="join.php" method="post">
+    <fieldset>
+      <legend>회원가입</legend>
+      <p> ID <input type="text" name="id" size="12" maxlength="8"></p>
+      <p> PW <input type="password" name="pwd" size="12" maxlength="8"></p>
+      <p> 메일 수신 여부
+        <input type="radio" value="y" name="receive" checked>예
+        <input type="radio" value="n" name="receive">아니요
+      </p>
+      <p> 관심 분야
+        <input type="checkbox" value="html" name="chk1">html
+        <input type="checkbox" value="css" name="chk2">css
+        <input type="checkbox" value="javascript" name="chk3">javascript
+      </p>
+      <input type="submit">
+    </fieldset>
+    <fieldset>
+      <legend>여러 줄 글상자와 목록상자</legend>
+      <p>답글</p><textarea name="reply" cols="30" rows="3"></textarea>
+      <p>과목선택
+        <select name="study">
+        <option value="html5">html5</option>
+        <option value="css">css</option>
+        <option value="javascript">javascript</option>
+        <option value="jquery">jquery</option>
+      </select></p>
+      <p>스터디지역
+        <select name="reg">
+        <optgroup label="관악구">
+          <option value="gwanak-bcd">봉천동</option>
+          <option value="gwanak-sld">신림동</option>
+          <option value="gwanak-nhd">남현동</option>
+        </optgroup>
+        <optgroup label="동대문구">
+          <option value="gwanak-jnd">전농동</option>
+          <option value="gwanak-dsf">답십리</option>
+          <option value="gwanak-ssd">신설동</option>
+        </optgroup>
+      </select></p>
+
+    </fieldset>
+    <fieldset>
+      <legend>신상명세서</legend>
+      <p><label for="name">이름 </label> <input type="text" id="name"></p>
+      <p><label for="주민">주민번호 </label> <input type="text"> - <input type="text" id="주민"></p>
+    </fieldset>
+    <input type="submit">
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      background: url(./images/sprites.png) no-repeat 0 0;
+      float: left;
+      list-style: none;
+    }
+
+    a {
+      text-align: center;
+      display: block;
+      line-height: 50px;
+      text-indent: -9999px;
+      width: 140px;
+      height: 50px;
+    }
+li.menu1:hover{background-position: 0 0px;}
+li.menu2:hover{background-position: 0 -101px;}
+li.menu3:hover{background-position: 0 -200px;}
+li.menu4:hover{background-position: 0 -300px;}
+li.menu5:hover{background-position: 0 -450px;}
+li.menu6:hover{background-position: 0 -550px;}
+li.menu7:hover{background-position: 0 -653px;}
+
+li.menu1{background-position: 0 -51px;}
+li.menu2{background-position: 0 -149px;}
+li.menu3{background-position: 0 -249px;}
+li.menu4{background-position: 0 -350px;}
+li.menu5{background-position: 0 -401px;}
+li.menu6{background-position: 0 -500px;}
+li.menu7{background-position: 0 -601px;}
+
+li:hover{transition-duration: .3s;}
+  </style>
+</head>
+
+<body>
+<ul>
+  <li class="menu1"><a href="#">menu1</a></li>
+  <li class="menu2"><a href="#">menu2</a></li>
+  <li class="menu3"><a href="#">menu3</a></li>
+  <li class="menu4"><a href="#">menu4</a></li>
+  <li class="menu5"><a href="#">menu5</a></li>
+  <li class="menu6"><a href="#">menu6</a></li>
+  <li class="menu7"><a href="#">menu7</a></li>
+</ul>
+</body>
+
+</html>
