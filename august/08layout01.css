@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.title, footer {
+  text-align: center;
+}
+
+nav {
+  background: azure;
+  width: 100%;
+}
+
+ul {
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+ul, .wrap {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+aside {
+  flex: 15rem;
+}
+@media only screen and (max-width: 768px) {
+    aside{display: none;}
+}

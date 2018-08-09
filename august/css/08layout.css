@@ -1,0 +1,39 @@
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header.main {
+  height: 100px;
+  background: honeydew;
+}
+
+div.container {
+  background: ivory;
+}
+
+aside.main {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: snow;
+}
+
+section.main {
+  float: right;
+  width: 800px;
+  height: 800px;
+  background: azure;
+}
+
+footer.main {
+  height: 200px;
+  background: floralwhite;
+  /* clear: both; */
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
