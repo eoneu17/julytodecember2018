@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>연산자</title>
+</head>
+
+<body>
+  <h1>비교 연산자</h1>
+  <script>
+    var x = 5; //number
+    document.write("var x = 5;" + "<br>")
+    var y = "5"; //string
+    document.write("var y = &#8220;5&#8221;;" + "<br>")
+    var result;
+    document.write("var resulet;" + "<br><br>")
+
+    result = (x == y); //값이 같은지 비교
+    document.write("x == y : " + result + "<br>");
+    result = (x !== y); //값 또는 타입이 다른지 비교
+    document.write("x !== y : " + result + "<br>");
+    result = (x === y); //값과 타입이 같은지 비교
+    document.write("x === y : " + result + "<br><br>");
+
+    var z = 5;
+    document.write("var z = 5;" + "<br><br>")
+
+    result = (x = y);
+    document.write("result = (x = y);" + "<br><br>");
+    result = (x == y);
+    document.write("x == y : " + result + "<br>");
+    result = (x === y);
+    document.write("x === y : " + result + "<br><br>");
+
+    result = (x == z);
+    document.write("x == z : " + result + "<br>");
+    result = (x === z);
+    document.write("x === z : " + result + "<br><br>");
+  </script>
+
+  <h1>논리 연산자</h1>
+  <script>
+    var x = 5;
+    var y = 7;
+    var result;
+    document.write("var x = 5;" + "<br>")
+    document.write("var y = 7;" + "<br>")
+    document.write("var result" + "<br><br>")
+
+    result = (x < 10 && y > 10); //둘 다 참이어야 true
+    document.write("x<10 && y>10 : " + result + "<br>")
+    result = (x < 10 || y > 10); //둘 중에 하나만 참이어도 true
+    document.write("x<10 || y>10 : " + result + "<br>")
+    result = !(x < 10 && y > 10); //반대로
+    document.write("!(x<10 && y>10) : " + result + "<br>")
+  </script>
+
+  <h1>비트 논리 연산자</h1>
+  <article>
+    <p>& : 모두 1일때만 1, 하나라도 0이면 0</p>
+    <p>| : 둘 중 하나만 1이어도 1, 모두 0이면 0</p>
+    <p>^ : 두 비트가 다르면 1, 같으면 0</p>
+    <p>~ : 값이 0이면 1, 1이면 0</p>
+  </article>
+
+  <script>
+    var x = 5; // 0101
+    var y = 7; // 0111
+    var result;
+    result = (x & y); // 비트곱
+    document.write("x & y = " + result + "<br>");
+    result = (x | y); // 비트합
+    document.write("x | y = " + result + "<br>");
+    result = (x ^ y); // 배타적 비트합
+    document.write("x ^ y = " + result + "<br>");
+    result = (~x); // 비트 부정
+    document.write("~x = " + result + "<br>");
+  </script>
+
+  <h1>조건 연산자</h1>
+  <script>
+    var x = 5;
+    var y = 7;
+    var result;
+    result = (x > y) ? x : y; // 조건 연산
+    document.write("큰 값 : " + result + "<br>");
+    result = (x > y) ? x - y : y - x; // 조건 연산
+    document.write("큰 값-작은 값 : " + result + "<br>");
+  </script>
+</body>
+
+</html>
