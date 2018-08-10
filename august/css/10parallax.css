@@ -1,0 +1,44 @@
+@charset "UTF-8";
+[class*=container] {
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  width: 40vw;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 .5rem #000;
+   border: 1px solid #fff;
+}
+
+header h1:after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background: #fff;
+  display: block;
+  margin: .5rem auto;
+}
+
+.container01 {
+  background-image: url(../img/w01.jpg);
+}
+
+.container02 {
+  background-image: url(../img/w02.jpg);
+}
+
+.container03 {
+  background-image: url(../img/w03.jpg);
+}

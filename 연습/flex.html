@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none;}
+    a:link, a:visited{color: inherit;}
+
+
+    ul {width: 70vw;height: 20vh; background-color: mistyrose;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row; /*기본값이라서 안 서도 됨*/
+      flex-wrap: wrap; /*기본값은 nowrap: 컨테이너에 따라서 아이템 폭이 줄어듦*/
+      /* flex-flow: row wrap;  으로 줄여서 쓸 수 있음 */
+      justify-content: center;
+      /* value: flex-start, flex-end, center, space-between, space-around */
+      align-items:center;
+      /* value: flex-start, flex-end, center, stretch, baseline */
+      align-content: center;
+      /* 여러줄 되었을 때 정렬 */
+
+    }
+
+    li {
+      background-color: pink;
+      margin: 8px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      /* flex: 1 1 auto;로 줄여서 쓸 수 있음 */
+      /* flex: auto;는 flex: 1 1 auto랑 똑같음 */
+      /* flex: 0 0 auto;는 flex: none;랑 똑같음 */
+      /* flex: 1;은 flex: 1 1 0;이랑 똑같음 */
+
+    }
+    li:first-child{order:1; font-weight: bold; align-self: stretch;}
+    li:last-child{order:-1; font-weight: bold;}
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><a href="#">menu01</a></li>
+    <li><a href="#">menu02</a></li>
+    <li><a href="#">menu03</a></li>
+    <li><a href="#">menu04</a></li>
+    <li><a href="#">menu05</a></li>
+  </ul>
+</body>
+
+</html>
