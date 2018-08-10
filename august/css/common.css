@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.clearfix{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .b{font-weight: bold;}
 
 .fs07{font-size: .7rem;}
