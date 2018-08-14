@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.js">  </script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+        mode:'fade', caption:true
+      });
+    });
+  </script>
+  <style>
+  .slider>li{
+    width: 500px;height: 300px;
+  }
+
+  </style>
+</head>
+
+<body>
+<div class="wrap" style="width:500px">
+  <ul class="slider">
+    <li><img src="images/1.jpg" alt="1"></li>
+    <li><img src="images/2.jpg" alt="2"></li>
+    <li><img src="images/3.jpg" alt="3"></li>
+  </ul>
+</div>
+</body>
+
+</html>

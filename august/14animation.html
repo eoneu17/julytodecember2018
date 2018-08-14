@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background: orange;
+      position: absolute;
+      animation-name: box1;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: 2;
+    }
+
+    div img{
+      width: 100%;
+    }
+
+    @keyframes box1 {
+      from {
+        top: 0;
+        left: 0;
+      }
+      50%{
+        left: 250px;
+        top: 250px;
+        background: deeppink;
+      }
+      to {
+        left: 500px;
+        background: peachpuff;
+        top: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"><img src="img/test.jpg" alt=""></div>
+</body>
+
+</html>

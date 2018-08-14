@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  div.for{
+    float: left;
+    width: 150px;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>if~else</h1>
+  <script>
+    var point = 90;
+    var grade;
+
+    if (point > 100) {
+      document.write('0~100점 사이의 값을 입력하세요.' + '<br>')
+    } else if (point >= 85) {
+      grade = "A";
+      document.write('아주 잘 했습니다.' + '<br>')
+    } else if (point >= 60) {
+      grade = "B";
+      document.write('잘 했습니다.' + '<br>')
+    } else if (point >= 30) {
+      grade = "C";
+      document.write('노력하시기 바랍니다.' + '<br>')
+    } else {
+      grade = "F";
+      document.write("많이 노력하시기 바랍니다." + '<br>')
+    }
+    document.write("당신의 학점은 " + grade + "입니다.")
+  </script>
+  <hr>
+  <h1>switch</h1>
+  <script>
+    var day;
+    var week = new Date().getDay();
+    switch (week) {
+      case 0:
+        day = 'Sunday';
+        break;
+      case 1:
+        day = 'Monday';
+        break;
+      case 2:
+        day = 'Tuesday';
+        break;
+      case 3:
+        day = 'Wednesday';
+        break;
+      case 4:
+        day = 'Thursday';
+        break;
+      case 5:
+        day = 'Friday';
+        break;
+      case 6:
+        day = 'Saturday';
+        break;
+      default:
+        day = 'none';
+    }
+    document.write ('Today is ' + day + '.');
+  </script>
+  <hr>
+  <h1>for</h1>
+  <script>
+    var a, b;
+    for (a = 2; a <= 9; a++) {
+      document.write('<div class="for"><br>'+a+'단<br>')
+      for (b = 1; b <= 9; b++) {
+        document.write(a + ' * ' + b + ' = ' + a * b + '<br>')
+      }
+      document.write('</div>')
+    }
+  </script>
+</body>
+
+</html>
