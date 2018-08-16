@@ -19,47 +19,59 @@
     .container img {
       width: 100%;
       height: 100%;
-      animation: img 1s ease 4s;
+      animation: img 3s ease 2s;
       animation-fill-mode: forwards;
       opacity: 0;
     }
 
     @keyframes img {
-      to{opacity: 1;}
+      to {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
     }
 
     [class*=bar] {
       background: #E5A100;
       position: absolute;
-      animation-duration: 1s;
+      animation-duration: .5s; 
       animation-timing-function: linear;
       animation-fill-mode: forwards;
     }
 
-    .bar1 {
+    .bar1, .bar3{
       width: 0px;
       height: 10px;
+      animation-name: move1;
+    }
+
+    .bar2, .bar4{
+      width: 10px;
+      height: 0;
+      animation-name: move2;
+    }
+
+    .bar1 {
       top: 0;
       left: 0;
-      animation-name: move1;
     }
 
     .bar2 {
-      width: 10px;height: 0;top: 0;right: 0;
-      animation-name: move2;
-      animation-delay: 1s;
+      top: 0;
+      right: 0;
+      animation-delay: .5s;
     }
 
     .bar3 {
-      width: 0;height: 10px;bottom: 0;right: 0;
-      animation-name: move1;
-      animation-delay: 2s;
+      bottom: 0;
+      right: 0;
+      animation-delay: 1s;
     }
 
     .bar4 {
-      width: 10px;height: 1px;bottom: 0;left: 0;
-      animation-name: move2;
-      animation-delay: 3s;
+      bottom: 0;
+      left: 0;
+      animation-delay: 1.5s;
     }
 
     @keyframes move1 {
@@ -69,7 +81,9 @@
     }
 
     @keyframes move2 {
-      to {height: 300px;}
+      to {
+        height: 300px;
+      }
     }
   </style>
 </head>

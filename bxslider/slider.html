@@ -7,31 +7,69 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>jQuery</title>
   <link rel="stylesheet" href="css/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/jquery.bxslider.js">  </script>
-  <script>
-    $(document).ready(function(){
-      $('.slider').bxSlider({
-        mode:'fade', caption:true
-      });
+  <link rel="stylesheet" href="css/myreset.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+</head>
+<script>
+  $(document).ready(function() {
+    var mySlider=$('.slider').bxSlider({
+      pager:false, controls:false, auto:true
     });
-  </script>
-  <style>
-  .slider>li{
-    width: 500px;height: 300px;
+    $('.left').click(function(){
+      mySlider.goToPrevSlide();
+      return false; //클릭해도 맨 위로 안 보내줌
+    });
+    $('.right').click(function(){
+      mySlider.goToNextSlide();
+    });
+  });
+</script>
+<style>
+  .wrap {
+    width: 500px;
+    height: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
   }
 
-  </style>
-</head>
+  .bx-wrapper {
+    box-shadow: none;
+    border: none;
+  }
+
+  .arrow {
+    border: solid #fff;
+    border-width: 1px 1px 0 0;
+    display: inline-block;
+    padding: 12px;
+    transform: translateY(-50%) rotate(-135deg);
+    position: absolute;
+    top: 50%;
+    margin: 20px;
+    cursor: pointer;
+    opacity: .7;
+  }
+
+  .right{
+    transform: translateY(-50%)rotate(45deg);
+    right: 0;
+  }
+</style>
 
 <body>
-<div class="wrap" style="width:500px">
-  <ul class="slider">
-    <li><img src="images/1.jpg" alt="1"></li>
-    <li><img src="images/2.jpg" alt="2"></li>
-    <li><img src="images/3.jpg" alt="3"></li>
-  </ul>
-</div>
+  <div class="wrap">
+    <ul class="slider">
+      <li><img src="images/w01.jpg" alt="1"></li>
+      <li><img src="images/w02.jpg" alt="2"></li>
+      <li><img src="images/w03.jpg" alt="3"></li>
+    </ul>
+    <div class="arrow left"><a href="#"></a></div>
+    <div class="arrow right"><a href="javascript:void(0)"></a></div>
+  </div>
+
+
 </body>
 
 </html>
