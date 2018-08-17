@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/myreset.css">
+  <style>
+    .row {
+      width: 100%;
+      background: peachpuff;
+    }
+
+    .row:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    [class*=span-] {
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    [class*=span-]:last-child {
+      margin-right: 0;
+    }
+
+    .row:last-child [class*=span-] {
+      margin-bottom: 0;
+    }
+
+    .span-12 {
+      width: 100%;
+      background: lightcyan;
+    }
+
+    .span-06 {
+      width: 49%;
+      background: pink;
+    }
+
+    .span-04 {
+      width: 32%;
+      background: azure;
+    }
+
+    .span-03 {
+      width: 23.5%;
+      background: lightyellow;
+    }
+
+    .box {
+      max-width: 150px;
+      height: 100%;
+      border-radius: 50%;
+      background: url(img/w01.jpg) no-repeat center;
+      background-size: cover;
+      cursor: pointer;
+      transition: 1s;
+      margin: 0 auto
+    }
+
+    .box:hover {
+      border: 3px solid #05314F;
+      box-shadow: inset 0 0 10px 5px #05314F;
+      background: url(img/w02.jpg) no-repeat center;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, facere, modi? Vero consequatur nulla culpa rerum dolorum quisquam enim modi. Quisquam ratione error omnis harum pariatur placeat debitis ducimus quo. Quod enim facere ullam atque nulla
+        saepe nam nostrum ut praesentium! Dolorum dolore tempora voluptatibus repellendus dolorem doloribus officiis debitis, non laborum sed, sapiente perferendis ullam veritatis, vero eaque deleniti id. Maiores maxime quae adipisci, dolore, dignissimos
+        ullam officia porro explicabo eum tempore a, voluptatibus mollitia? Dolorem exercitationem non repudiandae blanditiis natus quas, illum quod praesentium, doloremque accusantium aspernatur error numquam facilis suscipit aliquid dolorum, sit distinctio
+        neque deleniti debitis sunt vero fuga iste. Illo praesentium dicta illum, aliquam eum nobis, velit mollitia amet provident eius libero, atque, fugiat exercitationem.</div>
+    </div>
+    <div class="row">
+      <div class="span-06">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur minus accusantium suscipit voluptatibus porro eum quasi ipsam eveniet ducimus. Id culpa nobis quaerat placeat similique temporibus voluptatum blanditiis maiores laborum, et. Culpa
+        rerum voluptatibus animi id, sint, architecto qui, nemo quas inventore omnis velit sunt itaque, similique expedita. Similique necessitatibus, est ullam minima consequuntur cum minus et beatae. Blanditiis, deleniti.</div>
+      <div class="span-06">Ab corporis quam quasi iure eaque iste, provident fugit, asperiores dolor saepe veniam, sit? Impedit, voluptate amet consequatur. Voluptas quibusdam optio architecto, ullam nam, illo blanditiis dolorem quis incidunt molestias nostrum repudiandae
+        provident ex nesciunt sunt nisi commodi voluptate quidem rerum ratione perferendis assumenda. Itaque magni facilis nostrum eaque nihil, unde adipisci quas consequuntur nam omnis ut facere nobis in?</div>
+    </div>
+    <div class="row">
+      <div class="span-04">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi suscipit quidem dolorum sapiente nobis et, totam quas a officia odio voluptates porro ducimus dolores dignissimos id obcaecati saepe modi. Qui expedita facere ab. Est quibusdam alias
+        dignissimos porro, in laboriosam!</div>
+      <div class="span-04">Vero voluptas maxime delectus nesciunt expedita quo tenetur. Similique facere suscipit consequuntur, pariatur eos consectetur magnam enim quidem velit a reiciendis iure ex, voluptate, inventore labore. Ducimus non unde nobis, quas iusto nesciunt
+        esse aut doloremque voluptas voluptatibus laboriosam fugit!</div>
+      <div class="span-04">Tenetur reiciendis provident veritatis tempora eligendi, porro reprehenderit, autem ducimus tempore, nostrum quod facilis numquam illum distinctio voluptatum explicabo, unde cum libero dolor nam velit cumque voluptate aut omnis. Saepe ratione illum
+        cupiditate dolores, sequi illo repellendus aperiam deserunt quam!</div>
+    </div>
+    <div class="row">
+      <div class="span-03">
+        <div class="box" onclick='linkClick()'></div>
+        <script>
+          function linkClick() {
+            location.href = 'http://www.google.com';
+          }
+        </script>
+      </div>
+      <div class="span-03">In at vero, quam qui. Iste id quasi sunt dolorem, natus doloremque inventore, delectus ducimus corrupti hic velit labore! Culpa possimus sint, tempora quisquam unde magni ut asperiores, tenetur doloremque neque rerum laborum minus nostrum magnam,
+        repellat esse iure consectetur!</div>
+      <div class="span-03">Facere omnis, tenetur voluptates sapiente officia laudantium tempora similique esse dignissimos! Quam ipsam et enim quas, officiis, accusamus iusto modi delectus quidem doloremque sit, sed voluptatem repellat voluptate sint blanditiis veritatis
+        eius iure nostrum sunt? Corporis non sapiente veritatis, assumenda.</div>
+      <div class="span-03">Harum laborum dolorem voluptatem, maxime, temporibus nihil eos quia asperiores fugit, aliquid voluptatum. Veritatis molestias quibusdam dolorem neque! Qui odit dolorem numquam porro. Molestiae cum voluptas at soluta rem ad nihil alias, nulla quisquam
+        ipsum eius hic, numquam est. Expedita!</div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/myreset.css">
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: url(img/w01.jpg) no-repeat center;
+      background-size: 500px;
+      cursor: pointer;
+      transition: 1s
+    }
+
+    .box:hover {
+      border: 3px solid #05314F;
+      box-shadow: inset 0 0 10px 5px #05314F;
+      background: url(img/w02.jpg) no-repeat center;
+      background-size: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" onclick='linkClick()'></div>
+  <script>
+    function linkClick(){
+      location.href='http://www.google.com';
+    }
+  </script>
+</body>
+
+</html>
