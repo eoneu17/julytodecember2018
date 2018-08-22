@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js function</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background: lightyellow;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <button type='button' onclick="function01()">함수호출</button>
+  <button type='button' onclick="function02()">원래대로</button>
+  <div id="box">YELLOW</div>
+  <script>
+    var box = document.getElementById('box');
+    var body = document.getElementsByTagName('body');
+
+    function function01() {
+
+      box.innerHTML = 'PINK';
+      box.style.background = 'pink';
+      body[0].style.background = "url(img/w01.jpg)";
+      //body.item(0).style.background = "url()"
+    }
+
+    function function02() {
+      box.innerHTML = 'YELLOW';
+      box.style.background = 'lightyellow';
+      body[0].style.background = "";
+    }
+  </script>
+</body>
+
+</html>

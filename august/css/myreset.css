@@ -9,6 +9,10 @@ ul, ol {
   list-style: none;
 }
 
+a{
+  display: block;
+}
+
 a:link, a:visited {
   text-decoration: none;
   color: inherit;
@@ -16,4 +20,5 @@ a:link, a:visited {
 
 img {
   display: block;
+  width: 100%;
 }

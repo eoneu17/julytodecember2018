@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .goo{
+      overflow: hidden;
+    }
+    .goo>div{
+      width: 200px;
+      float: left;
+      border: 1px solid #ccc;
+      margin: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function print99dan(i) {
+      for (var j = 1; j < 10; j++) {
+        document.write(i + ' x ' + j + ' = ' + i * j + '<br />')
+      }
+    }
+  </script>
+
+  <div class="goo">
+    <div>
+      <script>
+        print99dan(2)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(3)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(4)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(5)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(6)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(7)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(8)
+      </script>
+    </div>
+    <div>
+      <script>
+        print99dan(9)
+      </script>
+    </div>
+  </div>
+  <hr>
+  <script>
+    function printMsg(name, age) {
+      document.write("이름 : <b>" + name + "</b><br />")
+      document.write("나이 : <b>" + age + "</b><br />")
+    }
+  </script>
+  <button type="button" onclick="printMsg('땡땡땡', 21)">정보</button>
+  <hr>
+  <script>
+    var result;
+    function add(name, n){
+      document.write(name+" 학생이 1부터 " +n+"까지 덧셈 수행<br />");
+      var sum=0;
+      for(var i=1; i<=n;i++){
+        sum+=i;
+      }
+      return sum;
+    }
+    result=add('땡땡',21);
+    document.write("결과 : "+result+"<br />");
+    result=add('댕댕',100);
+    document.write("결과 : "+result+"<br />")
+  </script>
+</body>
+
+</html>

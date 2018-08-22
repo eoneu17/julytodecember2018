@@ -1,0 +1,121 @@
+@charset "UTF-8";
+[class*=span] {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.row>div:last-child {
+  margin-right: 0;
+}
+
+.row::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.span06 {
+  width: 49%;
+}
+
+.span04 {
+  width: 32%;
+}
+
+.span03 {
+  width: 23.5%;
+}
+
+.span02 {
+  width: 15%;
+}
+
+.card {
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.card img {
+  border-radius: 9px 9px 0 0;
+}
+
+.card>div {
+  padding: 20px;
+}
+
+.card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  transition: .5s;
+}
+
+.btn:hover {
+  background-color: rgb(255, 184, 0);
+}
+
+.blue {
+  background: #007bff;
+}
+
+.pink {
+  background: deeppink;
+}
+
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+  margin-bottom: 0;
+}
+.span06,
+.span12 {
+  position: relative;
+}
+.bx-wrapper .bx-pager {
+  bottom: 10px;
+}
+
+.span06 .bx-pager{
+  right: 10px;top: 10px;
+}
+
+
+
+.arrow {
+  border: solid #fff;
+  border-width: 1px 1px 0 0;
+  display: inline-block;
+  top: 40%;
+  padding: 12px;
+  transform: rotate(-135deg);
+  position: absolute;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.right {
+  transform: rotate(45deg);
+  right: 0;
+}
+#box {
+  width: 200px;
+  height: 200px;
+  background: lightyellow;
+  text-align: center;
+  line-height: 200px;
+}
+
+button{width: 100px;height: 100px; border-radius: 50%;background: dodgerblue; color: #fff;border: none;cursor: pointer;}
