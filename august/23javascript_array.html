@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>array</title>
+  <style>
+    .answerCity,
+    .click {
+      cursor: pointer;
+    }
+
+    .colorName {
+      color: #fff;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+      font-weight: bold;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Cities</h1>
+  <p>Where do you live?</p>
+  <p onclick="answer(0,1)" class="answerCity">If you want to know my answer, just click me!</p>
+  <br>
+  <p>Where were you born in?</p>
+  <p onclick="answer(1,0)" class="answerCity">If you want to know my answer, just click me!</p>
+  <br>
+  <p>Where is your most memorable trip?</p>
+  <p onclick="answer(2,2)" class="answerCity">If you want to know my answer, just click me!</p>
+  <br>
+  <p>Where is your favorite city to visit?</p>
+  <p onclick="answer(3,3)" class="answerCity">If you want to know my answer, just click me!</p>
+  <script acync>
+    var city = ['Seoul', 'Bucheon', 'Gyeonju', 'Gangreung'];
+    var i, j;
+
+    function answer(i, j) {
+      document.getElementsByClassName('answerCity')[i].innerHTML = city[j] + '.';
+    }
+  </script>
+  <br>
+  <h1>Colors</h1>
+  <p onclick="myColor(k)" class="click">click to Show my colors!</p>
+  <span class="colorName">black</span>
+  <span class="colorName">orange</span>
+  <span class="colorName">pink</span>
+  <span class="colorName">blue</span>
+  <span class="colorName">gray</span>
+  <span class="colorName">purple</span>
+  <script acync>
+    var color = ['#000', 'orange', 'deeppink', 'dodgerblue', 'dimgray', 'indigo'];
+    var k;
+
+    function myColor(k) {
+      for (k = 0; k < 5; k++) {
+        document.getElementsByClassName('colorName')[k].style.background = color[k];
+      }
+    }
+  </script>
+  <br>
+  <h1>Average</h1>
+  <script>
+    var com = [95, 88, , 72, 68, , 99, , 82, , 78, 85];
+    var n = com.length;
+    var count = 0;
+
+    function average() {
+      var i, sum = 0;
+      for (i = 0; i < n; i++) {
+        if (com[i] === undefined) {
+          continue;
+        } else {
+          sum += com[i];
+          count++;
+        }
+      }
+      return (sum / count);
+    }
+ //var avg = average();
+
+  //  document.write(n + '명의 학생 중 점수를 입력한 ' + count + '명의 평균 점수는 ' + avg + '점.');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/myreset.css">
+  <style>
+    .topnav {
+      background-color: darkslategray;
+      display: flex;
+    }
+
+    .topnav a,
+    .topnav .icon {
+      color: #fff;
+      padding: .7rem 1rem;
+      font-size: 1.5rem;
+    }
+
+    .topnav a.active {
+      font-weight: bold;
+    }
+
+    .topnav a:hover {
+      text-shadow: 0 0 .5rem lightyellow;
+    }
+
+    .topnav a.icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .topnav a:not(.active) {
+        display: none;
+      }
+      .topnav a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav a.icon.open {
+        display: block;
+      }
+      /* when you click toggle icon, js add '.resonsive' */
+      .topnav.responsive,
+      .topnav.responsive a,
+      .topnav.responsive a.icon.close {
+        display: block;
+      }
+      .topnav.responsive a.icon.open {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav" id="topNav">
+    <a href="#home" class="active">HOME</a>
+    <a href="#news">NEWS</a>
+    <a href="#contact">CONTACT</a>
+    <a href="#about">ABOUT</a>
+    <a href="javascript:void(0);" class="icon open" onclick="toggle()"><i class="fas fa-bars"></i></a>
+    <a href="javascript:void(0);" class="icon close" onclick="toggle()"><i class="fas fa-times"></i></a>
+  </div>
+  <script async>
+    function toggle() {
+      var nav = document.getElementById('topNav');
+      if (nav.className === 'topnav') {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+  </script>
+
+  <a href="https://www.w3schools.com/howto/howto_js_topnav_responsive.asp" titld="How to creat a reponsive navigation bar">go to w3schools</a>
+  <br>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi consequatur autem corporis natus dolorum soluta harum veritatis, quisquam iure vero, facere mollitia id tenetur magnam rerum impedit delectus animi earum iusto voluptate! Omnis perferendis
+    sit ratione nam repellendus tempore laboriosam, eaque consectetur unde, quasi saepe repellat ab voluptatem nobis corporis rerum, molestias quo, voluptas adipisci culpa. Ex quisquam, quas dolorem perspiciatis? Delectus asperiores inventore, omnis laudantium
+    illum expedita, quos quaerat commodi voluptatem soluta ratione voluptas nam iusto reprehenderit dolor sint. Pariatur sequi dicta esse cum reiciendis magnam repellat vitae, nemo accusantium aperiam reprehenderit aliquid assumenda, cumque iure quae
+    doloremque labore!</p>
+</body>
+
+</html>
