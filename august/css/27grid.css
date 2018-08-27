@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.row div[class*='span'] {
+  float: left;
+  text-align: justify;
+  border: 1px solid #000;
+  margin-left: 2%;
+}
+.row div[class*='span']:first-child{
+  margin-left: 0;
+}
+
+.span06 {
+  width: 49%
+}
+
+.span04 {
+  width: 32%;
+}
+
+.span03{
+  width: 23.5%;
+}
