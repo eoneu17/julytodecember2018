@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/myreset.css">
+  <title>Grid</title>
+  <style>
+    h1 {
+      text-align: center;
+      margin: 10px;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      margin: 5px;
+    }
+
+    #grid>* {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    @media (max-width:600px) {
+      #grid {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Lorem</h1>
+  <div id="grid">
+    <nav>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Quos, quia.</li>
+        <li>Inventore, beatae!</li>
+      </ul>
+    </nav>
+    <article>
+      <h2>Lorem ipsum dolor.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores reprehenderit, facere dolores inventore maiores. Voluptate veniam, incidunt minus asperiores corporis nemo voluptatibus expedita dolorum velit dolores numquam quae assumenda alias
+        id vero officia debitis. Aliquid, quo beatae. Odit dicta, tempora provident corrupti dolores, quidem numquam saepe, a sunt quos officia laudantium eius voluptatibus cupiditate eum tenetur repudiandae ipsum harum minima atque vitae culpa nesciunt
+        itaque. Incidunt reprehenderit, velit dolores magnam delectus impedit. Non expedita quo excepturi quas perspiciatis nesciunt, ducimus architecto, veritatis ipsum, at illo sequi nobis laboriosam quos voluptatum accusamus doloribus officiis quia.
+        Ipsum magnam voluptatem in quis, vero.</p>
+    </article>
+  </div>
+</body>
+
+</html>
