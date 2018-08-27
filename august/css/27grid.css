@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.row {
+  width: 100%;
+}
+
 .row:after {
   content: "";
   display: block;
@@ -6,23 +10,51 @@
 }
 
 .row div[class*='span'] {
-  float: left;
   text-align: justify;
   border: 1px solid #000;
-  margin-left: 2%;
-}
-.row div[class*='span']:first-child{
-  margin-left: 0;
+  margin-bottom: 20px;
 }
 
-.span06 {
-  width: 49%
+@media screen and (min-width: 787px) {
+  .row div[class*='span'] {
+    float: left;
+    margin-left: 2%;
+  }
+  .row div[class*='span']:first-child {
+    margin-left: 0;
+  }
+  .span06 {
+    width: 49%;
+  }
+  .span04 {
+    width: 32%;
+  }
+  .span03 {
+    width: 23.5%;
+  }
 }
 
-.span04 {
-  width: 32%;
+@media screen and (min-width:576px) and (max-width:786px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .row div[class*='span'] {
+    float: left;
+    margin-left: 2%;
+  }
+  .row div[class*='span']:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  .span06, .span04, .span03 {
+    width: 49%;
+}
+.row div[class*=span].dpnone{display: none;}
 }
 
-.span03{
-  width: 23.5%;
+@media screen and (max-width:575px) {
+  .container {
+    width: 96%;
+    margin: 0 auto;
+  }
 }
