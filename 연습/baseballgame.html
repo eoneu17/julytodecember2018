@@ -21,6 +21,7 @@
     }
     var count = 0;
     while (count < 10) {
+      count++;
       var input = prompt('서로 다른 숫자 4자리 입력! (ex.1234)');
       var inputArr = input.split('');
       var wrongInput, strike, ball;
@@ -35,10 +36,14 @@
         wrongInput = false;
         strike = 0;
         ball = 0;
-        count = 0;
-        count++;
         var overlap;
         for (var j = 0; j < 4; j++) {
+          for (var l = 0; l < 4; l++) {
+            if (j !== l && inputArr[j] === inputArr[l]) {
+              overlap = true;
+              break;
+            }
+          }
           for (var k = 0; k < 4; k++) {
             if (num[j] == inputArr[k]) {
               if (j === k) {
@@ -49,16 +54,11 @@
               break;
             }
           }
-          for (var l = 0; l < 4; l++) {
-            if (j !== l && inputArr[j] === inputArr[l]) {
-              overlap = true;
-              break;
-            }
-          }
         }
         if (overlap === true) {
           console.log('같은 숫자 여러번 입력함');
           alert('같은 숫자 여러번 입력함');
+          overlap = false;
         }
       }
       if (strike === 4) {
