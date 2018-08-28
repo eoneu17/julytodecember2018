@@ -10,15 +10,26 @@
 
 <body>
   <script>
-    var list = [];
+    var num = prompt('문제 낼 서로 다른 숫자 4자리 입력 (ex.1234)');
+    var numArr = num.split('');
+    var numStr;
     for (var i = 0; i < 10; i++) {
-      list[i] = i;
+      numArr[i] = Number(numArr[i]);
     }
-    var num = [];
-    for (var i = 0; i < 4; i++) {
-      var select = Math.floor(Math.random() * list.length);
-      num[i] = list.splice(select, 1)[0];
+    for (var j = 0; j < 4; j++) {
+      if (isNaN(numArr[j])===false) {
+        continue;
+      }else{
+        numStr=true;
+        break;
+      }
     }
+    if(numStr===true || num.length !== 4){
+      console.log('4자리 숫자만 입력해');
+      alert('4자리 숫자만 입력해');
+    }else{
+    console.log('Start!');
+    alert('Start!');
     var count = 0;
     while (count < 10) {
       count++;
@@ -94,6 +105,7 @@
       alert('Congraturation!');
       document.write('홈런 축하!!');
     }
+  }
   </script>
 </body>
 
