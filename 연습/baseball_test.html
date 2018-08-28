@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var inputArr = [1, 2, 3, 3];
+    if (inputArr.length !== 4) {
+      console.log('4자리 숫자만 입력해');
+      count--;
+      break;
+    } else {
+      for (var j = 0; j < 4; j++) {
+        for (var l = 0; l < 4; l++) {
+          var wrong;
+          if (j !== l && inputArr[j] === inputArr[l]) {
+            wrong = true;
+            break;
+          }
+        }
+      }
+      if (wrong === true) {
+        console.log('같은 숫자 입력하지 마');
+      }
+    }
+  </script>
+</body>
+
+</html>
