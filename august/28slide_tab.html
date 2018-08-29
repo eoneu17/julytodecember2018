@@ -18,6 +18,12 @@
         controls: false,
         pagerCustom:'.bx_pager'
       });
+      $('#prevBtn').on("click", function(){
+        mySlider.goToPrevSlide();
+      })
+      $('#nextBtn').on("click", function(){
+        mySlider.goToNextSlide();
+      })
     });
   </script>
 </head>
