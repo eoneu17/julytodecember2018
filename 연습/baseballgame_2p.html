@@ -10,7 +10,7 @@
 
 <body>
   <script>
-    var num = prompt('문제 낼 서로 다른 숫자 4자리 입력 (ex.1234)');
+    var num = prompt('문제 낼 0~9 사이의 숫자 4개 입력 (ex.1234)');
     var numArr = num.split('');
     var numStr;
     for (var i = 0; i < 10; i++) {
@@ -34,7 +34,7 @@
     while (count < 10) {
       count++;
       var inputStr, wrongInput, strike, ball;
-      var input = prompt('서로 다른 숫자 4자리 입력! (ex.1234)');
+      var input = prompt('0~9 중 서로 다른 숫자 4자리 입력! (ex.0123)');
       var inputArr = input.split('');
       for (var i = 0; i < 4; i++) {
         inputArr[i] = Number(inputArr[i]);
