@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>폼 그룹</legend>
+      <input type="text" /><br />
+      <input type="checkbox" />
+    </fieldset>
+  </form>
+  <br>
+  <form>
+    <select name="category">
+      <optgroup label="javascript">
+        <option value="jQuery" selected="selected">jQuery</option>
+        <option value="ES2015">ES2015</option>
+        <option value="React">React</option>
+      </optgroup>
+      <optgroup label="etc">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="Git">Git</option>
+      </optgroup>
+    </select>
+  </form>
+  <br>
+  <form>
+    <input type="text" list="search">
+    <datalist id="search">
+      <option value="jQuery">jQuery</option>
+      <option value="ES2015">ES2015</option>
+      <option value="React">React</option>
+    </datalist>
+  </form>
+  <meter value="2" min="0" max="10">2/10</meter>
+  <progress value="15" max="100"></progress>
+</body>
+
+</html>
