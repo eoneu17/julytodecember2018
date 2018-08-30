@@ -10,7 +10,7 @@ ul, ol {
 }
 
 a{
-  display: block;
+  display: inline-block;
 }
 
 a:link, a:visited {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="msg1"></p>
+  <p id="msg2"></p>
+  <p id="msg3"></p>
+  <script>
+    var car = {
+      name: 'Sonata',
+      speed: 50,
+      color: 'white',
+      start: function() {
+        var result = this.speed + 10;
+        return result;
+      }
+    }
+
+    document.getElementById('msg1').innerHTML = car.name;
+    document.getElementById('msg2').innerHTML = car.speed;
+    document.getElementById('msg3').innerHTML = car.start();
+  </script>
+</body>
+
+</html>
