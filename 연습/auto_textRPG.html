@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Let's Play Auto RPG with Text!</title>
+</head>
+
+<body>
+  <div id="log" style="line-height: 1.5rem;"></div>
+  <script>
+    function logMsg(msg, color) {
+      if (!color) {
+        color = 'black';
+      }
+      var div = document.createElement('div');
+      div.innerHTML = msg;
+      div.style.color = color;
+      document.getElementById('log').appendChild(div);
+    }
+
+    var gameover = false;
+    var battle = false;
+
+    function Character(name, hp, att) {
+      this.name = name;
+      this.hp = hp;
+      this.att = att;
+    }
+    Character.prototype.attacked = function(damage) {
+      this.hp -= damage;
+      logMsg(this.name + ' 몬스터의 체력이 ' + this.hp + '으로 떨어졌습니다.');
+      if (this.hp <= 0) {
+        battle = false;
+      }
+    };
+    Character.prototype.attack = function(target) {
+      logMsg(this.name + ' 몬스터가 ' + target.name + '님을 공격합니다.');
+      target.attacked(this.att);
+    }
+
+    function Hero(name, hp, att, lev, xp) {
+      Character.apply(this, arguments);
+      this.lev = lev || 1;
+      this.xp = xp || 0;
+    }
+    Hero.prototype = Object.create(Character.prototype);
+    Hero.prototype.constructor = Hero;
+    Hero.prototype.attacked = function(damage) {
+      this.hp -= damage;
+      logMsg(this.name + '님의 체력이 ' + this.hp + '남았습니다');
+      if (this.hp <= 0) {
+        logMsg('죽었습니다. 레벨 ' + this.lev + '에서 모험이 끝납니다. 새로고침해서 다시 시작하세요.', 'deeppink');
+        battle = false;
+        gameover = true;
+      }
+    }
+    Hero.prototype.attack = function(target) {
+      logMsg(this.name + '님이 ' + target.name + ' 몬스터를 공격합니다.');
+      target.attacked(this.att);
+      if (target.hp <= 0) {
+        this.gainXP(target);
+      }
+    }
+    Hero.prototype.gainXP = function(target) {
+      logMsg('전투에서 승리하여 ' + target.xp + '의 경험치를 얻습니다.', 'dodgerblue');
+      this.xp += target.xp;
+      if (this.xp > 40 + 10 * this.lev) {
+        this.lev++;
+        logMsg('Level Up! ' + this.lev + ' 레벨이 되었습니다.', 'mediumblue');
+        this.hp = 100 + this.lev * 10;
+        this.xp -= 40 + this.lev * 10;
+      }
+    }
+
+    function Monster(name, hp, att, lev, xp) {
+      Character.apply(this, arguments);
+      this.lev = lev || 1;
+      this.xp = xp || 10;
+    }
+    Monster.prototype = Object.create(Character.prototype);
+    Monster.prototype.constructor = Monster;
+
+    function makeMonster() {
+      var monsterArray = [
+        ['달팽이', 12, 10, 1, 30],
+        ['다슬기', 20, 10, 3, 50],
+        ['슬라임', 13, 20, 5, 70],
+        ['풍뎅이', 20, 25, 7, 90],
+        ['장수풍뎅이', 100, 25, 6, 250]
+      ];
+      var monster = monsterArray[Math.floor(Math.random() * 5)];
+      return new Monster(monster[0], monster[1], monster[2], monster[3], monster[4]);
+    }
+
+    var hero = new Hero(prompt('영웅의 이름을 입력하세요.'), 100, 10);
+    logMsg(hero.name + '님이 모험을 시작합니다. 어디까지 성장할 수 있을까요?');
+    while (!gameover) {
+      var monster = makeMonster();
+      logMsg(monster.name + ' 몬스터를 마주쳤습니다. 전투가 시작됩니다.', 'salmon')
+      battle = true;
+      while (battle) {
+        hero.attack(monster);
+        if (monster.hp > 0) {
+          monster.attack(hero);
+        }
+        logMsg('<br>')
+      }
+    }
+  </script>
+</body>
+
+</html>
