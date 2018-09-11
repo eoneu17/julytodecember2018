@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Object</title>
+</head>
+
+<body>
+  <p id="box1"></p>
+  <p id="box2"></p>
+
+  <h3>car1</h3>
+  <p id="data10"></p>
+  <p id="data11"></p>
+  <p id="data12"></p>
+  <h3>car2</h3>
+  <p id="data20"></p>
+  <p id="data21"></p>
+  <p id="data22"></p>
+  <h3>car3</h3>
+  <p id="data30"></p>
+  <p id="data31"></p>
+  <p id="data32"></p>
+
+
+  <script>
+    const car = {
+      name: 'sonata', //property
+      speed: 100,
+      color: 'red',
+      speedup() { //method
+        return this.speed + 100;
+      }
+    };
+
+    const bus = new Object();
+    bus.name = 'KIA';
+    bus.speed = 100;
+    bus.color = 'blue';
+    bus.speedup = () => (bus.speed + 100);
+
+    document.getElementById('box1').innerHTML = `버스의 이름은 ${bus.name} 입니다.`;
+    document.getElementById('box2').innerHTML = `버스의 속도는 ${bus.speedup()} 입니다.`;
+
+    const cars = [{
+        name: 'Sonata',
+        color: 'blue',
+        speed: 100
+      },
+      {
+        name: 'Jeep',
+        color: 'red',
+        speed: 70
+      },
+      {
+        name: 'Passat',
+        color: 'white',
+        speed: 150
+      }
+    ];
+
+    for (let i = 0; i < cars.length; i++) {
+      document.getElementById('data1' + i).innerHTML = `자동차 이름: ${cars[i].name}`;
+      document.getElementById('data2' + i).innerHTML = `자동차 색: ${cars[i].color}`;
+      document.getElementById('data3' + i).innerHTML = `자동차 속도: ${cars[i].speed}`;
+    }
+  </script>
+</body>
+
+</html>

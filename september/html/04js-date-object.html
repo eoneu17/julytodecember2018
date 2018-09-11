@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Date Object</title>
+</head>
+<body>
+  <p id="clock" style="text-align:center;"></p>
+  <script>
+    function clock(){
+      let today=new Date();
+      let years=today.getFullYear();
+      let months=today.getMonth()+1;  //0부터 시작
+      let dates=today.getDate();
+      let hours=today.getHours();
+      let minutes=today.getMinutes();
+      let seconds=today.getSeconds();
+      document.getElementById('clock').innerHTML=`지금 시간은 <b>${years}년 ${months}월 ${dates}일 ${hours}시 ${minutes}분 ${seconds}초<b>`;
+      setInterval(clock,1000);
+    }
+    clock();
+  </script>
+</body>
+</html>

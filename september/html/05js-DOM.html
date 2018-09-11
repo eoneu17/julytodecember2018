@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM</title>
+  <style>
+    button{width: 100px;height: 100px;border-radius: 50%;border: none;margin: 10px;background: dodgerblue;color: #fff;font-weight: bold;font-size: 1.5rem;cursor: pointer;}
+  </style>
+</head>
+<body>
+  <div class="btn">
+    <button>Let's<br>write</button>
+    <button>Load<br>picture</button>
+    <button>Delete<br>item</button>
+    <button>Enlarge<br>pictures</button>
+    <button>Reduce<br>pictures</button>
+  </div>
+  <script>
+    function add(){
+      const header = document.createElement('h3');
+      const text = document.createTextNode('Hello!')
+      header.appendChild(text);
+      document.body.appendChild(header);
+    }
+    function imgAdd(){
+      const img=document.createElement('img');
+      img.src='../img/slide01.png';
+      img.width='1200';
+      document.body.appendChild(img);
+    }
+    function del(){
+      const body = document.querySelector('body')
+      body.removeChild(body.lastChild);
+    }
+    function enlarge(){
+      const img = document.querySelectorAll('img');
+      for(let i=0;i<img.length;i++)
+      img[i].width+=100;
+    }
+    function reduce(){
+      const img = document.querySelectorAll('img');
+      for(let i=0;i<img.length;i++)
+      img[i].width-=100;
+    }
+    document.querySelectorAll('button')[0].addEventListener('click', add);
+    document.querySelectorAll('button')[1].addEventListener('click', imgAdd);
+    document.querySelectorAll('button')[2].addEventListener('click', del);
+    document.querySelectorAll('button')[3].addEventListener('click', enlarge);
+    document.querySelectorAll('button')[4].addEventListener('click', reduce);
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Type Animate</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <style>
+    #contents{height: 100vw;height: 100vh;background: dodgerblue;color: #fff;font-weight: bold;font-size: 2.5rem;display: flex;align-items: center;justify-content: center;}
+    .sec span{opacity: 0;}
+    .sec span.show{
+      display: inline-block;
+      animation-name: ani;
+      animation-duration: .3s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes ani{
+      0%{opacity: 0;transform:translate(-100px, 100px)}
+      100%{opacity: 1;transform:translate(0, 0)}
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $('.sec h2 span').each(function(i){
+        setTimeout(function(){
+          $('.sec h2 span').eq(i).addClass('show');
+        },100*(i+1));
+      });
+    });
+  </script>
+</head>
+<body>
+  <section id="contents">
+    <div id="text">
+      <div class="container">
+        <div class="sec">
+          <h2>
+            <span>N</span><span>E</span><span>V</span><span>E</span><span>R</span> <span>S</span><span>A</span><span>Y</span> <span>N</span><span>E</span><span>V</span><span>E</span><span>R</span><span>.</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
