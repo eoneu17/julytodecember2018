@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Slide Show</title>
+  <style>
+    h1{text-align: center;}
+    .slideShow{margin: 0 auto;width: 400px;height: 300px;position: relative;}
+    .btn button{position: absolute;top: 50%;transform: translateY(-50%);border: none;font-weight: bold;color: #000;background: none;font-size: 3rem;cursor: pointer;}
+    .btn button.prev{left: -40px;}
+    .btn button.next{right: -40px;}
+  </style>
+</head>
+<body>
+  <h1>Slide Show</h1>
+  <div class="slideShow">
+    <div class="slides">
+      <img src="../img/img1.jpg" alt="slideshow">
+  </div>
+    <div class="btn">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+  <script>
+    let count=1;
+    document.querySelector('.btn .prev').addEventListener('click',()=>{count--;show();});
+    document.querySelector('.btn .next').addEventListener('click',()=>{count++;show();});
+    function show(){
+      if(count>7) count=1;
+      if(count<1) count=7;
+      document.querySelector('.slides img').src=`../img/img${count}.jpg`;
+    }
+    setInterval(()=>{
+      count++;
+      show();
+    },2000)
+
+  </script>
+</body>
+</html>
