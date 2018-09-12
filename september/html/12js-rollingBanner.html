@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Rolling Banner</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    h1{font-weight: bold;text-align: center;font-size: 3rem;margin: 1rem;}
+    .banner{width: 1200px;height: 300px;margin: 0 auto;position: relative;overflow: hidden;}
+    .banner ul{display: flex;flex-wrap: nowrap;position: absolute;}
+    .banner img{height: 300px;}
+    .btn button{position: absolute;top: 50%;transform: translateY(-50%);border: none;font-weight: bold;color: #fff;background: none;font-size: 3rem;cursor: pointer;}
+    .btn button.prev{left: 10px;}
+    .btn button.next{right: 10px;}
+  </style>
+</head>
+<body>
+  <h1>Rolling Banner</h1>
+  <div class="banner">
+    <ul>
+      <li><a href="#"><img src="../img/slide01.png" alt="slide"></a></li>
+      <li><a href="#"><img src="../img/slide02.png" alt="slide"></a></li>
+      <li><a href="#"><img src="../img/slide03.png" alt="slide"></a></li>
+      <li><a href="#"><img src="../img/img1.jpg" alt="img1"></a></li>
+      <li><a href="#"><img src="../img/img2.jpg" alt="img2"></a></li>
+      <li><a href="#"><img src="../img/img3.jpg" alt="img3"></a></li>
+      <li><a href="#"><img src="../img/img4.jpg" alt="img4"></a></li>
+      <li><a href="#"><img src="../img/img5.jpg" alt="img5"></a></li>
+      <li><a href="#"><img src="../img/img6.jpg" alt="img6"></a></li>
+      <li><a href="#"><img src="../img/img7.jpg" alt="img7"></a></li>
+    </ul>
+    <div class="btn">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+  <script>
+    const btns=Array.from(document.querySelectorAll('.banner button'));
+    let count=0;
+    btns.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelector('.banner ul').style.left=count+'px';
+      })
+    })
+    btns[0].addEventListener('click', ()=>{
+      count+=300;
+      if(count>0) count=0;
+    });
+    btns[1].addEventListener('click', ()=>{
+      count+=-300;
+      const width=1200-document.querySelector('ul').offsetWidth;
+      if(count<width) count=width;
+    });
+  </script>
+</body>
+</html>
