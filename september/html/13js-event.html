@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Event</title>
+  <script>
+    function init() {
+      var p = document.getElementById('p');
+      //p.onmouseover = over;
+      //p.onmouseout = out;
+      // p.onmouseover=function(){this.style.background="orchid"};
+      // p.onmouseout=function(){this.style.background="none"};
+      p.addEventListener('mouseover',function(){this.style.background='orchid';})
+      p.addEventListener('mouseout',function(){this.style.background='none';})
+    }
+    // function over() {
+    //   p.style.background = 'orchid';
+    // }
+    //
+    // function out() {
+    //   p.style.background = 'none';
+    // }
+  </script>
+</head>
+
+<body onload="init()">
+  <!-- <p onmouseover="this.style.background='orchid'" onmouseout="this.style.background='none'">Over me!</p> -->
+  <p id="p">Over me!</p>
+
+</body>
+
+</html>
