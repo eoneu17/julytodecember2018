@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onclick</title>
+  <script>
+    function calculate() {
+      var exp = document.getElementById('exp');
+      var result = document.getElementById('result');
+      result.value = eval(exp.value);
+    }
+  </script>
+</head>
+
+<body>
+  <form action="">
+    식<input type="text" id="exp"><br> 값
+    <input type="text" id="result"><br>
+    <input type="button" value="계산" onclick="calculate()">
+  </form>
+</body>
+
+</html>

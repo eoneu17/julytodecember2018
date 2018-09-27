@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style>
+		body{font-family: 'Roboto', sans-serif;background: #ddd;}
+		.wrap{width: 1200px;margin:0 auto;background: #fff;}
+		.section{width: 950px;margin:0px auto;padding:40px 0;}
+		.section:after{content:"";display: block;clear: both;}
+		.section .section_title{float:left;width:150px;}
+		.section .section_content{float: right;width: 800px;}
+		.section .section_title h3{
+			font-size:20px;font-weight:bold;color:#333;
+		}
+		.section .section_title .more_btn{display: block;width:23px;height:23px;background:url(./images/more_btn.png) 0 -23px no-repeat;text-indent:-9999px;margin-top:14px;}
+		.section .section_title .more_btn:hover{
+			background-position:0 0;
+		}
+		/*news-list*/
+		.news_list:after{content:"";display: block;clear: both;}
+		.news_list li{
+			float:left;border-left: 1px solid #dddedf;
+			width:200px;padding-left: 20px;
+		}
+		.news_list li:first-child{border-left:0;padding-right:30px;}
+		.news_list li+li{padding-right:30px;}
+		.news_list a{color:#888;}
+		.news_list .news_title{font-size:20px;height:84px;color:#56565e;margin-bottom:37;}
+		.news_list .date{font-size:13px;}
+	</style>
+</head>
+
+<body>
+  <div class="section news_sec">
+    <div class="section_title">
+      <h3>뉴스룸</h3>
+      <a href="/news" class="more_btn"></a>
+    </div>
+    <div class="section_content">
+      <ul class="news_list">
+        <li>
+          <a href="/news/view/133">
+            <h4 class="news_title" style="word-wrap: break-word;">HDC영창, 54회 국제컴퓨터음악컨퍼런스(ICMC 2018) 공</h4>
+            <p class="text" style="word-wrap: break-word;">국내 대표음악업체 HDC영창(대표:현계흥)이 5일부터 10일까지 대구... </p>
+            <span class="date">2018.08.07 · 보도자료 </span>
+          </a>
+        </li>
+        <li>
+          <a href="/news/view/132">
+            <h4 class="news_title" style="word-wrap: break-word;">HDC영창, 음향 분야의 노벨상 34회 美 TEC어워즈 최종</h4>
+            <p class="text" style="word-wrap: break-word;">디지털음향업체 HDC영창(대표:현계흥)의 전자악기 브랜드 커즈와일이... </p>
+            <span class="date">2018.07.04 · 보도자료 </span>
+          </a>
+        </li>
+        <li>
+          <a href="/news/view/131">
+            <h4 class="news_title" style="word-wrap: break-word;">14년 비공개 후원한 메이크어위시 우수후원사 선정</h4>
+            <p class="text" style="word-wrap: break-word;">종합문화업체 HDC영창(대표:현계흥)이 국제 비영리단체인 메이크어... </p>
+            <span class="date">2018.06.26 · 보도자료 </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

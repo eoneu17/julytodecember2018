@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jQuery DOM</title>
+	<link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		div{border: 1px solid #000;margin:20px;}
+		div div{border: 1px dotted #ccc;}
+		.active{
+			font-size:20px;
+			color:#090;
+			border: 5px solid #f00;
+		}
+	</style>
+  <script>
+    $(document).ready(function(){
+      solveM1();
+      solveM2();
+      solveM3();
+      solveM4();
+      solveM5();
+    });
+    function solveM1(){
+      // var $m1=$('#m_1');
+      // $m1.css('color','#ff0000')
+      $('#m_1').css({
+        'color':'red', 'font-size':'20px','font-weight':'bold'
+      });
+    }
+    function solveM2(){
+      $('#m_2').attr('class','active');
+    }
+    function solveM3(){
+      $('#m_3 img').attr('src','../img/img2.jpg')
+    }
+    function solveM4(){
+      $('<p>list4<p>').appendTo('#m_4');
+    }
+    function solveM5(){
+      $('#m_5 p:last-child').remove();
+    }
+  </script>
+</head>
+<body>
+	<div>
+		<div id="m_1">
+			#M_1:글자색을 빨간색으로 변경해주세요.
+		</div>
+	</div>
+	<div>
+		<div id="m_2">
+			#M_2:클래스 active를 적용해 주세요.
+		</div>
+	</div>
+	<div>
+		<div id="m_3">
+			#M_3:이미지를 02.jpg로 바꿔주세요.<br>
+			<img src="../img/img1.jpg" alt="img">
+		</div>
+	</div>
+  <div>
+		<div id="m_4">
+			add list 4
+      <p>list1</p>
+      <p>list2</p>
+      <p>list3</p>
+		</div>
+	</div>
+  <div>
+		<div id="m_5">
+      remove list 4
+      <p>list1</p>
+      <p>list2</p>
+      <p>list3</p>
+      <p>list4</p>
+		</div>
+	</div>
+</body>
+</html>
