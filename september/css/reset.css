@@ -36,3 +36,8 @@ h1, h2, h3, h4, h5, h6{
 
 .m05{margin: .5rem;}
 .m10{margin: 1rem;}
+
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
