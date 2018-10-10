@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Add</title>
+  <style>
+    li{border: 1px solid #000;margin: 10px;}
+    li.select{background: #ccc;}
+  </style>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var $li=$('<li class="afterNew">menu</li>')
+      $('#after').click(function(){
+        $('ul.menu').append($li);
+      });
+      $('#before').click(function(){
+        $('ul.menu').prepend($li);
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="after">after</button>
+  <button id="before">before</button>
+  <ul class="menu">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li class="select">menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+    <li>menu6</li>
+  </ul>
+</body>
+</html>
