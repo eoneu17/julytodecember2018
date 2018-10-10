@@ -7,30 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS Animation</title>
   <style>
-    #panel {
-      width: 600px;
-      height: 300px;
-      border: 1px solid #000;
-      position: relative;
-    }
-
-    #panel #bar {
-      position: absolute;
-      left: 50px;
-      top: 190px;
-      width: 500px;
-      height: 20px;
-      background: #f30;
-    }
-
-    #panel #img {
-      position: absolute;
-      left: 50px;
-      top: 120px;
-    }
-    .view{
-      transform: rotateY(180deg);
-    }
+    #panel {width: 600px;height: 300px;border: 1px solid #000;position: relative;}
+    #panel #bar {position: absolute;left: 50px;top: 190px;width: 500px;height: 20px;background: #f30;}
+    #panel #img {position: absolute;left: 50px;top: 120px;}
+    .view {transform: rotateY(180deg);}
   </style>
   <script>
     var startX, endX, currentX, step, timer, img;
@@ -50,39 +30,33 @@
     }
 
     function initEventListener() {
-      document.getElementById('start').addEventListener('click', function() {
-        start();
-      });
-      document.getElementById('stop').addEventListener('click', function() {
-        stop();
-      });
+      document.getElementById('start').addEventListener('click', start)
+      document.getElementById('stop').addEventListener('click', stop)
     }
 
     function start() {
       if (timer == 0) {
-        timer = setInterval(startMove, 30)
+        timer = setInterval(function() {
+          currentX += step;
+          if (currentX >= endX) {
+            currentX = endX;
+            step = -2;
+            img.className = "view";
+          }
+          if (currentX < startX) {
+            currentx = startX;
+            step = 2;
+            img.className = "";
+          }
+          img.style.left = currentX + 'px';
+        }, 30)
       }
     }
 
-    function startMove() {
-      currentX += step;
-      if(currentX>=endX){
-        currentX=endX;
-        step=-2;
-        img.className="view";
-      }
-      if(currentX<startX){
-        currentx=startX;
-        step=2;
-        img.className="";
-      }
-      img.style.left = currentX + 'px';
-    }
-
-    function stop(){
-      if(timer!=0){
+    function stop() {
+      if (timer != 0) {
         clearInterval(timer);
-        timer=0;
+        timer = 0;
       }
     }
   </script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Animation</title>
+  <style>
+    #panel {width: 600px;height: 300px;border: 1px solid #000;position: relative;}
+    #panel #bar {position: absolute;left: 50px;top: 190px;width: 500px;height: 20px;background: #f30;}
+    #panel #img {position: absolute;left: 50px;top: 120px;}
+    .view {transform: rotateY(180deg);}
+  </style>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+    var startX, endX, currentX, step, timer, img;
+    window.onload = function() {
+      init();
+      initEventListener();
+    }
+
+    function init() {
+      var bar = document.getElementById('bar');
+      startX = bar.offsetLeft;
+      endX = bar.clientWidth + startX - 120;
+      currentX = startX;
+      step = 2;
+      timer = 0;
+      img = document.getElementById('img');
+    }
+
+    function initEventListener() {
+      document.getElementById('start').addEventListener('click', start)
+      document.getElementById('stop').addEventListener('click', stop)
+    }
+
+    function start() {
+      if (timer == 0) {
+        timer = setInterval(function() {
+          currentX += step;
+          if (currentX >= endX) {
+            currentX = endX;
+            step = -2;
+            img.className = "view";
+          }
+          if (currentX < startX) {
+            currentx = startX;
+            step = 2;
+            img.className = "";
+          }
+          img.style.left = currentX + 'px';
+        }, 30)
+      }
+    }
+
+    function stop() {
+      if (timer != 0) {
+        clearInterval(timer);
+        timer = 0;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <div id="panel">
+      <div id="bar"></div>
+      <div id="img"><img src="../img/car.png" alt="car"></div>
+    </div>
+    <div id="nav"><button id="start">시작</button><button id="stop">멈춤</button></div>
+  </div>
+</body>
+
+</html>

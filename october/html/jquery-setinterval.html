@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Animation</title>
+  <style>
+    #panel {width: 600px;height: 300px;border: 1px solid #000;position: relative;}
+    #panel #bar {position: absolute;left: 50px;top: 190px;width: 500px;height: 20px;background: #f30;}
+    #panel #img {position: absolute;left: 50px;top: 120px;}
+    .view {transform: rotateY(180deg);}
+  </style>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+    var $img1;
+    var count=0;
+    $(document).ready(function(){
+      init();
+      start();
+    });
+    function init(){
+      $img1=$('#img01');
+    }
+    function start(){
+      setInterval(changeImg,1000);
+    }
+    function changeImg(){
+      count++;
+      if(count>3){
+        count=1;
+      }
+      $img1.attr('src','../img/slide0'+count+'.png');
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <div id="panel"><img src="../img/slide01.png" alt="img" id="img01"></div>
+  </div>
+</body>
+
+</html>
