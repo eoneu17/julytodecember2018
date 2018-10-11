@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tab Menu</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    div{width: 800px;border: 1px solid dodgerblue;margin: 300px auto;}
+    nav ul{display: flex;}
+    nav li{padding: 20px;width: 200px;text-align: center;list-style: none;background: lightyellow;border-bottom: 1px solid dodgerblue;cursor: pointer;}
+    nav li~li{border-left: 1px solid dodgerblue;}
+    section{padding: 20px;padding-left: 50px;display: none;}
+    nav li.active{border-bottom: none;background: lightblue;font-weight: bold;}
+    section.active{display: block;}
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav>
+      <ul>
+        <li class="active">뉴스 줌</li>
+        <li>사회</li>
+        <li>경제</li>
+        <li>IT</li>
+      </ul>
+    </nav>
+    <section class="active">
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, in?</li>
+        <li>Officiis minus architecto, sint assumenda cum, sunt atque vero molestias.</li>
+        <li>Illum ducimus voluptate porro dicta quae labore, nostrum deserunt odio!</li>
+        <li>Hic obcaecati, sed consequuntur expedita. Eos voluptas labore nulla dolorem.</li>
+        <li>Corrupti asperiores dicta saepe a ea placeat odio vel sed?</li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>Quaerat atque doloremque nulla. Repudiandae et possimus pariatur eaque veritatis.</li>
+        <li>Quaerat, ipsam, debitis! Fugiat dolorum soluta, necessitatibus iusto eos mollitia!</li>
+        <li>Inventore ea in accusamus totam provident omnis soluta reiciendis recusandae.</li>
+        <li>Tempore voluptate, expedita neque et ratione dolore nostrum perferendis, maiores.</li>
+        <li>Laudantium deserunt doloribus voluptate non impedit fugit, ea ut iure?</li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>Eveniet quos, porro officiis modi debitis ipsum animi, quidem maxime?</li>
+        <li>Aspernatur consequatur error rem ducimus deserunt autem alias quia. Vero!</li>
+        <li>Adipisci ipsa quos laboriosam non quod nesciunt, sapiente repellat laborum.</li>
+        <li>Eveniet voluptatem, iusto possimus corrupti veniam, quos ad quod eligendi.</li>
+        <li>In fuga natus dignissimos laudantium aliquid harum ipsa enim, dolorum.</li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>Nihil debitis excepturi labore aliquid odio unde repudiandae, eaque blanditiis.</li>
+        <li>Commodi recusandae non soluta libero voluptate, corrupti cum ab incidunt.</li>
+        <li>Magni nisi, deserunt, officia culpa nihil eius voluptas nemo doloribus.</li>
+        <li>Minus dolore tempore magnam excepturi facilis in, incidunt voluptas accusantium!</li>
+        <li>Cum vero explicabo fugiat necessitatibus aliquid minus, a minima voluptas.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+  tabMenu();
+  function tabMenu() {
+    var tablinks = document.querySelectorAll('nav ul li');
+    Array.from(tablinks).forEach(function (tablink){
+      tablink.addEventListener('click', tabopen);
+    });
+
+    function tabopen() {
+      var tabcontents = document.querySelectorAll('section');
+      for (var i = 0, item; item=tabcontents[i]; i++) {
+        tablinks[i].classList.remove('active');
+        tabcontents[i].classList.remove('active');
+      }
+      this.classList.add('active');
+      for (var i = 0, item; item=tabcontents[i]; i++) {
+        if (tablinks[i].classList.contains('active')) {
+          tabcontents[i].classList.add('active');
+        }
+      }
+    }
+  }
+  </script>
+</body>
+
+</html>
