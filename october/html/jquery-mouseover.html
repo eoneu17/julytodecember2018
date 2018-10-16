@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #parent{width: 300px;height: 300px;position: absolute;left: 200px;top: 100px;background: pink;}
+    #child{width: 100px;height: 100px;position: absolute;left: 100px;top: 100px;background: #fff;}
+  </style>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function(){
+      var count=0;
+      var $info=$("#info");
+      var $child=$('#child');
+      $('#parent').mouseover(function(){
+        count++;
+        $info.html($info.html()+'<br>'+count+'over');
+      });
+      $('#parent').mouseenter(function(){
+        count++;
+        $info.html($info.html()+'<br>'+count+'enter');
+      });
+      $('#parent').mouseout(function(){
+        count++;
+        $info.html($info.html()+'<br>'+count+'out');
+      });
+      $('#parent').mouseleave(function(){
+        count++;
+        $info.html($info.html()+'<br>'+count+'leave');
+      });
+    });
+;  </script>
+</head>
+<body>
+  <div id="info">이벤트 정보 출력</div>
+  <div id="parent">
+    parent
+    <div id="child">child</div>
+  </div>
+</body>
+</html>

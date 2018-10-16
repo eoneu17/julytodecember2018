@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    nav{width: 500px;display: flex;justify-content: space-between;margin: 0 auto;border: 3px solid pink;}
+    button{border: none;background: #fff;color: pink;height: 50px;width: 20%;font-size: 1rem;}
+    button.on{font-weight: bold;background: pink;color: #fff;}
+    article{display: none;width: 500px;height: 200px;margin: 0 auto;padding: 20px;background: pink;color: #fff;}
+    article h3{margin-bottom: 10px;}
+  </style>
+  <script>
+    $(function(){
+      $('article').eq(0).show();
+      $('nav button').on({
+        mouseover: function(){
+          $(this).addClass('on');
+        },
+        mouseout: function(){
+          $(this).removeClass();
+        },
+        click: function(){
+          $('nav button').removeClass();
+          $('article').hide();
+          $(this).addClass('on');
+          $('article').eq($i).show();
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <button class="on">menu1</button>
+    <button>menu2</button>
+    <button>menu3</button>
+    <button>menu4</button>
+    <button>menu5</button>
+  </nav>
+  <div>
+    <article class="on">
+      <h3>Lorem ipsum dolor.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio voluptatem numquam, eligendi obcaecati eveniet molestiae vel optio nulla, nobis, quo mollitia sunt sit. Similique, sed repellat ad, at eius eveniet.</p>
+    </article>
+    <article>
+      <h3>Maiores asperiores, dolor.</h3>
+      <p>Dolorum veniam dolore placeat rem, ullam iure maxime quo eaque, neque sint suscipit itaque nisi distinctio omnis voluptate illum hic libero mollitia incidunt, doloremque eum! Excepturi, iure, illum. Qui, itaque.</p>
+    </article>
+    <article>
+      <h3>Distinctio, animi, doloribus.</h3>
+      <p>Dicta inventore sed minus possimus ad aut impedit dolor, deleniti iusto cumque. Placeat iste non veritatis id culpa officiis quaerat, sequi, maxime omnis adipisci illum eaque, voluptas accusantium illo repellat.</p>
+    </article>
+    <article>
+      <h3>Quos sed, odit!</h3>
+      <p>Harum cum temporibus deleniti reprehenderit cumque similique reiciendis quisquam, consectetur distinctio veniam mollitia, alias laborum facere dignissimos incidunt labore sed odit voluptates totam. Laborum repellat accusantium, unde provident ipsam asperiores.</p>
+    </article>
+    <article>
+      <h3>Magni, beatae, cumque.</h3>
+      <p>Omnis ipsum aliquid quo. Amet nemo itaque atque nulla laborum est officia sunt, exercitationem voluptatibus nihil eveniet, reiciendis dolorem magni quos neque excepturi libero porro tempore, dolore aliquid rerum omnis!</p>
+    </article>
+  </div>
+</body>
+</html>
