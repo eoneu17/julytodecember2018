@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		html{scroll-behavior: smooth;}
+		body{background: #545454;}
+		.wrap{width: 950px;margin:0 auto;padding-bottom:400px;}
+		#top_menu{width: 950px;height: 114px;background: #545454;position: fixed;top: 0;transition: .5s;}
+		#top_menu:after{content:"";display: block;clear: both;}
+		#logo{float: left;width:125px;padding-top:40px;}
+		#top_menu ul{float:right;}
+		#top_menu ul:after{content:"";display: block;clear: both;}
+		#top_menu ul li{float: left;}
+		#top_menu ul li a{display: block;color:#ffffff;
+			padding:59px 0 0 63px;text-align:center;}
+		#top_menu ul li.on a{color:#000;font-weight:bold;}
+		#contents {padding-top:114px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header id="top_menu">
+			<h1 id="logo">
+				<a href="#"><img src="../img/logoPaper.png" alt="Paper"></a>
+			</h1>
+			<ul>
+				<li class="on"><a href="#paper">paper</a></li>
+				<li><a href="#works">works</a></li>
+				<li><a href="#email">email</a></li>
+			</ul>
+		</header>
+		<div id="contents">
+			<div id="paper"><img src="../img/paper.jpg" alt="img1"></div>
+			<div id="works"><img src="../img/work.jpg" alt="img2"></div>
+			<div id="email"><img src="../img/email.jpg" alt="img3"></div>
+		</div>
+	</div>
+
+	<script>
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		var nav=document.querySelector('header')
+		if (prevScrollpos > currentScrollPos) {
+				nav.style.top = "0";
+			} else {
+				nav.style.top='-114px';
+			}
+		prevScrollpos = currentScrollPos;
+	}
+		</script>
+</body>
+</html>

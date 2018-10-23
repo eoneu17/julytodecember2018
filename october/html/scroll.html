@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  nav{margin: 30px 0 0 50px;}
+  nav button{font-weight: 1rem;}
+  main{position: absolute;width: 300px;height: 200px;left: 50px;top: 100px;border: 1px solid #000;overflow: scroll;}
+  img{width: 1000px;position: relative;}
+</style>
+<script>
+  $(function(){
+    var $info=$('#info');
+    var $container=$('main');
+    $('nav button').click(function(){
+      var left='scrollLeft='+$container.scrollLeft()+'<br>';
+      var timer=setInterval(function(){
+        left+=5;
+        $container.scrollLeft(keft);
+        if(left>=scrillEnd){
+          clearInerval(timer);
+        }
+      },100);
+    });
+  });
+</script>
+<body>
+  <nav>
+    <button id="btn">confirm</button>
+    <div id="info"></div1
+  </nav>
+  <main>
+    <img src="../img/sample.png" alt="sample">
+  </main>
+</body>
+
+</html>

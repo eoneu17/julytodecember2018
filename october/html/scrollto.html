@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    /* html{scroll-behavior: smooth;} */
+    body{background: #545454;}
+    .wrap{width: 950px;margin: 0 auto;}
+    header{position: fixed;top: 0;width: 950px;height: 114px;display: flex;justify-content: space-between;align-items: center;background: #545454;}
+    header nav button{padding-left: 60px;margin-top: 10px;color: #fff;}
+    header nav button.on{font-weight: bold;}
+    main{margin-top: 114px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1><a href="ddd"><img src="../img/logoPaper.png" alt="paper"></a></h1>
+      <nav>
+        <button class="on">paper</button>
+        <button>work</button>
+        <button>email</button>
+      </nav>
+    </header>
+    <main>
+      <section id="paper"><img src="../img/paper.jpg" alt="img"></section>
+      <section id="work"><img src="../img/work.jpg" alt="img"></section>
+      <section id="email"><img src="../img/email.jpg" alt="img"></section>
+    </main>
+  </div>
+
+  <script>
+    scroll();
+    function scroll(){
+      const menu=Array.from(document.querySelectorAll('header nav button'));
+      const content=document.querySelectorAll('main section');
+      menu.forEach(function (e){
+        e.addEventListener('click',move);
+      });
+      function move(){
+        for(let i=0, item;item=menu[i];i++){
+          menu[i].classList.remove('on');
+        }
+        this.classList.add('on');
+        let i=menu.indexOf(this);
+        content[i].scrollIntoView({behavior: 'smooth'});
+        // scrollIntoViewOptions Optional
+        // A Boolean or an object with the following options:
+        // {
+        //   behavior: "auto"  | "instant" | "smooth",
+        //   block:    "start" | "end",
+        // }
+        // scrollTo(x, y)
+      }
+      var prevScrollpos = window.pageYOffset;
+    	window.onscroll = function() {
+    		var currentScrollPos = window.pageYOffset;
+    		var nav=document.querySelector('header')
+    		if (prevScrollpos > currentScrollPos) {
+    				nav.style.top = "0";
+    			} else {
+    				nav.style.top='-114px';
+    			}
+    		prevScrollpos = currentScrollPos;
+    	}
+    }
+  </script>
+</body>
+</html>

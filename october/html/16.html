@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <style>
+    #parent{border: 1px solid #000;height: 400px;width: 500px;margin: 50px 0 0 100px;position: absolute;left: 100px;top: 100px;}
+    #car{position: absolute;left: 50px;top: 100px;width: 120px;height: 70px;}
+  </style>
+  <script>
+    $(function(){
+      var $car=$('#car');
+      $('#parent').click(function(e){
+        var left=e.clientX;
+        var top=e.clientY;
+        $car.animate({
+          left: left,
+          top: top
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="parent"><img src="../img/car.gif" alt="car" id="car"></div>
+</body>
+</html>
