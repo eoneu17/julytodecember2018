@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    .container {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .container::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 25%;
+      float: left;
+    }
+
+    .card-img {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width: 100%;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-align: center;
+      background: skyblue;
+      transition: .5s
+    }
+
+    .btn a {
+      color: #fff;
+    }
+
+    .btn:hover {
+      background: dodgerblue;
+    }
+
+    .btn-wrap {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .btn-wrap button {
+      border: none;
+      width: 50px;
+      height: 50px;
+      padding: 0 10px;
+      border-radius: 50%;
+      background: skyblue;
+      transition: .5s;
+      font-weight: bold;
+      color: #fff;
+      margin: 5px;
+    }
+
+    .btn-wrap button.active {
+      background: dodgerblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn-wrap">
+    <button class="btn0 active">all</button>
+    <button class="btn1">1</button>
+    <button class="btn2">2</button>
+    <button class="btn3">3</button>
+  </div>
+  <div class="container">
+    <div class="card one1">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title11111111</h4>
+        <p class="card-text">1111111111111111</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card two2">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title2222</h4>
+        <p class="card-text">222222222</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card three3">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title</h4>
+        <p class="card-text">3333333</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card two2">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title</h4>
+        <p class="card-text">222222222222</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card one1">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title</h4>
+        <p class="card-text">1111111111111</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card three3">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title</h4>
+        <p class="card-text">tex33333333333t</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card one1">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title</h4>
+        <p class="card-text">11111111111111111</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="card two2">
+      <img class="card-img" src="../img/img01.png" alt="img">
+      <div class="card-body">
+        <h4 class="card-title">title</h4>
+        <p class="card-text">222222222222222222222222222</p>
+        <div class="btn">
+          <a href="tel:010-0000-0000">010-0000-0000</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var btns = document.querySelectorAll('.btn-wrap button');
+    var cards = document.querySelectorAll('.card');
+    Array.prototype.forEach.call(btns, function(btn) {
+      btn.addEventListener('click', function() {
+        for (var i = 0, item; item = btns[i]; i++) {
+          btns[i].classList.remove('active');
+        }
+        this.classList.add('active');
+        var index = Array.prototype.indexOf.call(btns, this);
+        for (var i = 0, item; item = cards[i]; i++) {
+          if (cards[i].className.indexOf(index)!=-1) {
+            cards[i].style.display = 'block';
+          } else if(index===0){
+            cards[i].style.display='block';
+          }else {
+            cards[i].style.display = 'none';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

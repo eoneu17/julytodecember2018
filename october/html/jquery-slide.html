@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">s
+  <script src="../js/jquery-3.3.1.js"></script>
+  <style>
+    .wrap{width: 1200px;margin: 0 auto;}
+    section{width: 100%;}
+    .banner{width: 100px;height: 400px;}
+  </style>
+  <script>
+    $(function(){
+      var current=0;
+      $('#bt_next').click(function(){
+        if(current<4){
+          current++;
+        }
+        listMove();
+      });
+      $('#bt_next').click(function(){
+        if(current>0){
+          current--;
+        }
+        listMove();
+      });
+      function listMove(){
+        $('.banner ul').stop().animate({
+          left: current*1000*-1,
+          300
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <section>
+      <div class="banner">
+        <ul>
+          <li><img src="../img/images01.jpg" alt="img1"></li>
+          <li><img src="../img/images02.jpg" alt="img2"></li>
+          <li><img src="../img/images03.jpg" alt="img3"></li>
+          <li><img src="../img/images04.jpg" alt="img4"></li>
+          <li><img src="../img/images05.jpg" alt="img5"></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
