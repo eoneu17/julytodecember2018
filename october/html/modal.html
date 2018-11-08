@@ -29,11 +29,32 @@
       float: left;
       width: 150px;
     }
+    #glayLayer{
+      position: fixed;
+      left: 0;top: 0;
+      width: 100%;height: 100%;
+      opacity: .6;background: #000;
+    }
+    #overLayer{
+      position: fixed;
+      top: 50%;left: 50%;
+      margin-top: -142px;margin-left: -215px;
+    }
   </style>
   <script>
     $(function(){
-
-    })
+      $('body').append('<div id="glayLayer"></div><div id="overLayer"></div>');
+      $('ul li a.modal').click(function(){
+        $('#galleryLayer').show();
+        $('#overLayer').show();
+        $('#overLayer').html('<img src="'+$(this).attr("href")+'>");
+        return false;
+      });
+      $('#glayLayer, #overLayer').click(function(){
+        $('#galleryLayer').hide();
+        $('#overLayer').hide();
+      });
+    });
   </script>
 </head>
 <body>
